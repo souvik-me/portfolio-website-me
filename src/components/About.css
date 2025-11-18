@@ -1,0 +1,155 @@
+.about {
+  background: white;
+  padding: 100px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.core-competencies {
+  margin: 40px 0;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.core-competencies h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.competency-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.competency-item svg {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.feature-card svg {
+  font-size: 28px;
+  color: var(--primary-color);
+  padding: 12px;
+  background: #f0f0ff;
+  border-radius: 12px;
+}
+
+.feature-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.about-image {
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.about-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.about-quote {
+  position: absolute;
+  bottom: 40px;
+  right: -30px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+}
+
+.about-quote p {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.about-quote span {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-quote {
+    position: static;
+    margin-top: 20px;
+  }
+}
