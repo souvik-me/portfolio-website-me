@@ -42,7 +42,7 @@ const Blog = () => {
         </div>
         
         <h2 className="section-title text-center">
-          Thoughts & <span>Insights</span>
+          <span>Thoughts & Insights</span>
         </h2>
         
         <p className="section-subtitle text-center">

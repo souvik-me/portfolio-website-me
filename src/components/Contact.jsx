@@ -21,24 +21,30 @@ const Contact = () => {
         
         <div className="contact-content">
           <div className="contact-info">
-            <div className="info-card">
-              <FaEnvelope />
+            <a href="mailto:souvikmba16@gmail.com" className="info-card">
+              <div className="icon-wrapper">
+                <FaEnvelope />
+              </div>
               <div>
                 <h4>Email</h4>
                 <p>souvikmba16@gmail.com</p>
               </div>
-            </div>
+            </a>
             
-            <div className="info-card">
-              <FaPhone />
+            <a href="tel:+919749408983" className="info-card">
+              <div className="icon-wrapper">
+                <FaPhone />
+              </div>
               <div>
                 <h4>Phone</h4>
                 <p>+91 9749408983</p>
               </div>
-            </div>
+            </a>
             
             <div className="info-card">
-              <FaMapMarkerAlt />
+              <div className="icon-wrapper">
+                <FaMapMarkerAlt />
+              </div>
               <div>
                 <h4>Location</h4>
                 <p>Kolkata, India</p>

@@ -12,8 +12,8 @@ const About = () => {
           </div>
           
           <h2 className="section-title">
-            Building Bridges Between<br />
-            <span>Data & Decisions</span>
+            <span>Building Bridges Between<br />
+            Data & Decisions</span>
           </h2>
           
           <p className="about-text">

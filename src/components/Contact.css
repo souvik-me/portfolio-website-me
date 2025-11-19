@@ -29,25 +29,43 @@
   background: #f8f9fb;
   border-radius: 15px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .info-card:hover {
   background: var(--primary-color);
   color: white;
   transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(91, 95, 255, 0.2);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 15px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .icon-wrapper {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .info-card svg {
   font-size: 28px;
   color: var(--primary-color);
-  padding: 15px;
-  background: white;
-  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .info-card:hover svg {
-  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 

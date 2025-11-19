@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h2>Business <span>analyst</span></h2>
+            <h2><span>Business Analyst</span></h2>
             <p>
               Transforming data into actionable insights. Helping businesses 
               make smarter decisions through comprehensive analysis and 
@@ -29,14 +29,14 @@ const Footer = () => {
           
           <div className="footer-contact">
             <h3>Contact</h3>
-            <p>hello@analyst.com</p>
-            <p>+91 (555) 123-4567</p>
-            <p>Pune, India</p>
+            <p>souvikmba16@gmail.com</p>
+            <p>+91 9749408983</p>
+            <p>Kolkata, India</p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>© 2025 Business analyst. All rights reserved.</p>
+          <p>© 2025 Souvik. All rights reserved.</p>
           <p className="footer-credit">
             Crafted with <FaHeart className="heart-icon" /> for impactful solutions
           </p>

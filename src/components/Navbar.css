@@ -25,20 +25,21 @@
 }
 
 .nav-logo h2 {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--text-dark);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.nav-logo h2:first-child {
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 2px;
 }
 
 .nav-logo span {
   color: var(--primary-color);
-}
-
-.nav-logo p {
-  font-size: 11px;
-  color: var(--text-light);
-  font-weight: 400;
 }
 
 .nav-menu {

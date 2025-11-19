@@ -78,7 +78,7 @@ const Projects = () => {
         </div>
         
         <h2 className="section-title text-center">
-          Projects That Made <span>Impact</span>
+          <span>Projects That Made Impact</span>
         </h2>
         
         <p className="section-subtitle text-center">
