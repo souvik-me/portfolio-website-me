@@ -1,8 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [errors, setErrors] = useState({})
+  const [submitted, setSubmitted] = useState(false)
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }))
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const newErrors = {}
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email'
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required'
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    }
+
+    setErrors(newErrors)
+
+    if (Object.keys(newErrors).length === 0) {
+      setSubmitted(true)
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' })
+      // Hide success message after 3 seconds
+      setTimeout(() => setSubmitted(false), 3000)
+    }
+  }
+
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -54,9 +116,9 @@ const Contact = () => {
             <div className="social-links">
               <h4>Follow Me</h4>
               <div className="social-icons">
-                <a href="#" className="social-icon"><FaLinkedin /></a>
-                <a href="#" className="social-icon"><FaGithub /></a>
-                <a href="#" className="social-icon"><FaTwitter /></a>
+                <a href="https://www.linkedin.com/in/souvik-integrationinsights/" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn"><FaLinkedin /></a>
+                <a href="https://github.com/souvik-me" target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub"><FaGithub /></a>
+                <a href="https://x.com/AtomicreactX" target="_blank" rel="noopener noreferrer" className="social-icon" title="Twitter"><FaTwitter /></a>
               </div>
             </div>
             
@@ -70,29 +132,63 @@ const Contact = () => {
           </div>
           
           <div className="contact-form">
-            <form>
+            {submitted && (
+              <div className="success-message">
+                ✓ Thank you! Your message has been sent successfully.
+              </div>
+            )}
+            <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input type="text" placeholder="Priya Manna" />
+                  <input 
+                    type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Priya Manna"
+                    className={errors.name ? 'error' : ''}
+                  />
+                  {errors.name && <span className="error-message">{errors.name}</span>}
                 </div>
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input type="email" placeholder="priya@example.com" />
+                  <input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="priya@example.com"
+                    className={errors.email ? 'error' : ''}
+                  />
+                  {errors.email && <span className="error-message">{errors.email}</span>}
                 </div>
               </div>
               
               <div className="form-group">
                 <label>Subject</label>
-                <input type="text" placeholder="Project Inquiry" />
+                <input 
+                  type="text" 
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Project Inquiry"
+                  className={errors.subject ? 'error' : ''}
+                />
+                {errors.subject && <span className="error-message">{errors.subject}</span>}
               </div>
               
               <div className="form-group">
                 <label>Your Message</label>
                 <textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="6" 
                   placeholder="Tell me about your project, timeline, and goals..."
+                  className={errors.message ? 'error' : ''}
                 ></textarea>
+                {errors.message && <span className="error-message">{errors.message}</span>}
               </div>
               
               <button type="submit" className="primary-btn submit-btn">

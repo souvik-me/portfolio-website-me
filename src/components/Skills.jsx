@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { FaChartBar, FaChartLine, FaBrain, FaCode, FaLayerGroup, FaUsers } from 'react-icons/fa'
 import './Skills.css'
 
 const Skills = () => {
+  const [animatedSkills, setAnimatedSkills] = useState(new Set())
+  const skillsSectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // When skills section comes into view, animate all skills
+            const skillIds = new Set()
+            document.querySelectorAll('.skill-progress').forEach((el, index) => {
+              skillIds.add(index)
+            })
+            setAnimatedSkills(skillIds)
+            // Stop observing after animation starts
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    if (skillsSectionRef.current) {
+      observer.observe(skillsSectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
   const skillsData = [
     {
       category: 'Data Analysis',
@@ -75,7 +103,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills" ref={skillsSectionRef}>
       <div className="skills-container">
         <div className="section-badge">
           <span>💡</span> Expertise & Skills
@@ -106,8 +134,8 @@ const Skills = () => {
                     </div>
                     <div className="skill-bar">
                       <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
+                        className={`skill-progress ${animatedSkills.size > 0 ? 'animate' : ''}`}
+                        style={{ '--skill-level': `${skill.level}%` }}
                       ></div>
                     </div>
                   </div>

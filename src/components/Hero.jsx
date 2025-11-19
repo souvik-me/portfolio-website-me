@@ -34,25 +34,25 @@ const Hero = () => {
           </p>
           
           <div className="hero-buttons">
-            <button className="primary-btn">
+            <a href="#projects" className="primary-btn">
               View My Work <FaArrowRight />
-            </button>
-            <button className="secondary-btn">
+            </a>
+            <a href="#contact" className="secondary-btn">
               Get in Touch
-            </button>
+            </a>
           </div>
           
           <div className="hero-stats">
             <div className="stat-item">
-              <h3>5+</h3>
+              <h3>6+</h3>
               <p>Years Experience</p>
             </div>
             <div className="stat-item">
-              <h3>50+</h3>
+              <h3>24+</h3>
               <p>Projects Delivered</p>
             </div>
             <div className="stat-item">
-              <h3>30+</h3>
+              <h3>18+</h3>
               <p>Happy Clients</p>
             </div>
           </div>

@@ -93,7 +93,21 @@
   height: 100%;
   background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   border-radius: 10px;
+  width: 0%;
   transition: width 1s ease-out;
+}
+
+.skill-progress.animate {
+  width: var(--skill-level) !important;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--skill-level);
+  }
 }
 
 .certifications {
