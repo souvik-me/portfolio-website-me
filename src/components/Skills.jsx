@@ -108,15 +108,15 @@ const Skills = () => {
         <div className="section-badge">
           <span>💡</span> Expertise & Skills
         </div>
-        
+
         <h2 className="section-title text-center">
           My Skill Arsenal
         </h2>
-        
+
         <p className="section-subtitle text-center">
           A comprehensive toolkit honed through years of experience and continuous learning
         </p>
-        
+
         <div className="skills-grid">
           {skillsData.map((category, index) => (
             <div key={index} className="skill-card">
@@ -124,7 +124,7 @@ const Skills = () => {
                 <div className="skill-icon">{category.icon}</div>
                 <h3>{category.category}</h3>
               </div>
-              
+
               <div className="skill-list">
                 {category.skills.map((skill, idx) => (
                   <div key={idx} className="skill-item">
@@ -133,7 +133,7 @@ const Skills = () => {
                       <span>{skill.level}%</span>
                     </div>
                     <div className="skill-bar">
-                      <div 
+                      <div
                         className={`skill-progress ${animatedSkills.size > 0 ? 'animate' : ''}`}
                         style={{ '--skill-level': `${skill.level}%` }}
                       ></div>
@@ -144,7 +144,7 @@ const Skills = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="certifications">
           <h3>Certifications</h3>
           <div className="cert-list">
@@ -153,6 +153,110 @@ const Skills = () => {
                 {cert}
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="tools-section">
+          <h3>BUSINESS ANALYSIS TOOLS</h3>
+          <div className="tools-grid-skills">
+            <div className="tool-card">
+              <div className="tool-icon">📊</div>
+              <p>Power BI</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📈</div>
+              <p>Tableau</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📗</div>
+              <p>Excel</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📐</div>
+              <p>Visio</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">🎨</div>
+              <p>Lucidchart</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="tools-section">
+          <h3>PROJECT MANAGEMENT TOOLS</h3>
+          <div className="tools-grid-skills">
+            <div className="tool-card">
+              <div className="tool-icon">◆</div>
+              <p>Jira</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">⚪</div>
+              <p>Asana</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📋</div>
+              <p>Trello</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📅</div>
+              <p>Monday.com</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">✓</div>
+              <p>ClickUp</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="tools-section">
+          <h3>OTHER TOOLS</h3>
+          <div className="tools-grid-skills">
+            <div className="tool-card">
+              <div className="tool-icon">🎨</div>
+              <p>Figma</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">🖼️</div>
+              <p>Miro</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📝</div>
+              <p>Confluence</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">💬</div>
+              <p>Slack</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">📓</div>
+              <p>Notion</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="tools-section">
+          <h3>AI TOOLS</h3>
+          <div className="tools-grid-skills">
+            <div className="tool-card">
+              <div className="tool-icon">🤖</div>
+              <p>ChatGPT</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">💻</div>
+              <p>GitHub Copilot</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">🧠</div>
+              <p>Claude</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">✨</div>
+              <p>Gemini</p>
+            </div>
+            <div className="tool-card">
+              <div className="tool-icon">🎨</div>
+              <p>Midjourney</p>
+            </div>
           </div>
         </div>
       </div>
