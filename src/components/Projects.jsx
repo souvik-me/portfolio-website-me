@@ -1,132 +1,243 @@
 import React, { useState } from 'react'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaCheckCircle, FaChartLine, FaShieldAlt, FaDatabase, FaCog, FaRocket } from 'react-icons/fa'
 import './Projects.css'
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All Projects')
+  const [activeFilter, setActiveFilter] = useState('All')
+  const [hoveredProject, setHoveredProject] = useState(null)
+
+  const featuredProject = {
+    id: 'featured',
+    title: 'Tax & Compliance Automation System',
+    category: 'FinTech',
+    status: 'Live in Production',
+    duration: '8 months',
+    description: 'Fully automated tax calculation and reporting engine integrating with POS and payment systems to ensure real-time accuracy and compliance.',
+    impactLabel: 'Revenue Leakage Reduction',
+    tags: ['FinTech', 'Compliance Automation', 'Data Validation', 'Revenue', 'SQL'],
+    metrics: [
+      { value: '100%', label: 'Automated Tax Calculation' },
+      { value: '99.9%', label: 'Accuracy Rate' },
+      { value: '50K+', label: 'Transactions/Day' },
+      { value: '0', label: 'Manual Errors' }
+    ],
+    features: [
+      { icon: FaCheckCircle, text: 'Real-time POS Integration' },
+      { icon: FaShieldAlt, text: 'AI-Driven Validation' },
+      { icon: FaDatabase, text: 'Centralized Data Management' },
+      { icon: FaCog, text: 'Automated Reporting' }
+    ]
+  }
 
   const projects = [
     {
-      id: 1,
+      id: 2,
       title: 'Revenue Analytics Dashboard',
       category: 'Analytics',
+      status: 'Completed',
       duration: '3 months',
-      image: '/src/assets/images/project1.jpg',
-      description: 'Comprehensive Power BI dashboard tracking revenue metrics and KPIs',
+      description: 'Comprehensive Power BI dashboard tracking revenue metrics, KPIs, and business performance indicators.',
       impact: '+35%',
-      tags: ['Power BI', 'SQL', 'Python']
-    },
-    {
-      id: 2,
-      title: 'Supply Chain Optimization',
-      category: 'Optimization',
-      duration: '4 months',
-      image: '/src/assets/images/project2.jpg',
-      description: 'End-to-end analysis and redesign of supply chain processes, reducing costs',
-      impact: '-30%',
-      tags: ['Process Mining', 'Tableau', 'Optimization']
+      impactLabel: 'Revenue Insights',
+      tags: ['Power BI', 'SQL', 'Python', 'Analytics']
     },
     {
       id: 3,
-      title: 'Customer Journey Analytics',
-      category: 'Intelligence',
-      duration: '2 months',
-      image: '/src/assets/images/project3.jpg',
-      description: 'Deep-dive analysis of customer behavior patterns across touchpoints',
-      impact: '+42%',
-      tags: ['Google Analytics', 'Python', 'ML']
+      title: 'Supply Chain Optimization',
+      category: 'Optimization',
+      status: 'Completed',
+      duration: '4 months',
+      description: 'End-to-end analysis and redesign of supply chain processes, reducing operational costs significantly.',
+      impact: '-30%',
+      impactLabel: 'Cost Reduction',
+      tags: ['Process Mining', 'Tableau', 'Optimization']
     },
     {
       id: 4,
-      title: 'Predictive Churn Model',
-      category: 'Analytics',
-      duration: '5 months',
-      image: '/src/assets/images/project4.jpg',
-      description: 'Machine learning model predicting customer churn with 88% accuracy',
-      impact: '-23%',
-      tags: ['Python', 'Machine Learning', 'R']
+      title: 'Customer Segmentation Model',
+      category: 'AI/ML',
+      status: 'Completed',
+      duration: '2 months',
+      description: 'Machine learning model for customer segmentation enabling targeted marketing campaigns.',
+      impact: '+45%',
+      impactLabel: 'Campaign ROI',
+      tags: ['Python', 'Machine Learning', 'Clustering', 'Analytics']
     },
     {
       id: 5,
-      title: 'Digital Transformation Initiative',
-      category: 'Optimization',
-      duration: '8 months',
-      image: '/src/assets/images/project5.jpg',
-      description: 'Led enterprise-wide digital transformation, modernizing legacy systems',
-      impact: '+55%',
-      tags: ['Agile', 'Change Management', 'JIRA']
+      title: 'Financial Forecasting System',
+      category: 'Analytics',
+      status: 'Completed',
+      duration: '5 months',
+      description: 'Predictive analytics system for financial forecasting and budget planning with high accuracy.',
+      impact: '95%',
+      impactLabel: 'Forecast Accuracy',
+      tags: ['Python', 'Time Series', 'Forecasting', 'SQL']
     },
     {
       id: 6,
-      title: 'Real-time KPI Dashboard',
-      category: 'Intelligence',
+      title: 'Inventory Management Dashboard',
+      category: 'Optimization',
+      status: 'Completed',
       duration: '3 months',
-      image: '/src/assets/images/project6.jpg',
-      description: 'Interactive real-time dashboard providing executive-level insights',
+      description: 'Real-time inventory tracking and optimization dashboard reducing stockouts and overstock.',
+      impact: '-25%',
+      impactLabel: 'Inventory Costs',
+      tags: ['Power BI', 'SQL', 'Optimization']
+    },
+    {
+      id: 7,
+      title: 'Sales Performance Tracker',
+      category: 'Analytics',
+      status: 'Completed',
+      duration: '2 months',
+      description: 'Interactive dashboard for tracking sales team performance, targets, and conversion metrics.',
       impact: '+28%',
-      tags: ['Power BI', 'Real-time', 'API Integration']
+      impactLabel: 'Sales Growth',
+      tags: ['Tableau', 'SQL', 'Analytics']
     }
   ]
 
-  const filters = ['All Projects', 'Analytics', 'Optimization', 'Business Intelligence']
+  const filters = ['All', 'FinTech', 'Analytics', 'Optimization', 'AI/ML']
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
+    : projects.filter(project => project.category === activeFilter)
 
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
         <div className="section-badge">
-          <span>●</span> Featured Work
+          <span className="badge-dot">●</span>
+          Portfolio
         </div>
-        
-        <h2 className="section-title text-center">
-          <span>Projects That Made Impact</span>
+
+        <h2 className="section-title">
+          Featured <span className="gradient-text">Projects</span>
         </h2>
-        
-        <p className="section-subtitle text-center">
-          Real-world solutions delivering measurable business results
+
+        <p className="section-subtitle">
+          Transforming data into actionable insights through innovative solutions
         </p>
-        
-        <div className="project-filters">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter)}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-        
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-impact">{project.impact}</div>
+
+        {/* Featured Project Showcase */}
+        <div className="featured-project">
+          <div className="featured-badge">
+            <FaRocket /> Flagship Project
+          </div>
+
+          <div className="featured-content">
+            <div className="featured-left">
+              <div className="featured-meta">
+                <span className="status-badge">{featuredProject.status}</span>
+                <span className="category-badge">{featuredProject.category}</span>
+                <span className="duration">{featuredProject.duration}</span>
               </div>
-              
-              <div className="project-content">
-                <div className="project-meta">
-                  <span>{project.duration}</span>
-                  <span>•</span>
-                  <span>{project.category}</span>
+
+              <h3 className="featured-title">{featuredProject.title}</h3>
+
+              <p className="featured-description">{featuredProject.description}</p>
+
+              <div className="featured-tags">
+                {featuredProject.tags.map((tag, index) => (
+                  <span key={index} className="featured-tag">{tag}</span>
+                ))}
+              </div>
+
+              <div className="featured-features">
+                {featuredProject.features.map((feature, index) => (
+                  <div key={index} className="feature-item">
+                    <feature.icon className="feature-icon" />
+                    <span>{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="featured-right">
+              <div className="metrics-grid">
+                {featuredProject.metrics.map((metric, index) => (
+                  <div key={index} className="metric-card">
+                    <div className="metric-value">{metric.value}</div>
+                    <div className="metric-label">{metric.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <button className="featured-cta">
+                View Case Study <FaArrowRight />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Project Filters */}
+        <div className="projects-header">
+          <h3 className="projects-section-title">More Projects</h3>
+          <div className="project-filters">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+                onClick={() => setActiveFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="projects-grid">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="project-card"
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-card-inner">
+                <div className="project-header">
+                  <span className="project-status">
+                    <span className="status-dot"></span>
+                    {project.status}
+                  </span>
+                  <span className="project-category">{project.category}</span>
                 </div>
-                
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                
+
+                <h4 className="project-title">{project.title}</h4>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-impact-section">
+                  <div className="impact-value">{project.impact}</div>
+                  <div className="impact-label">{project.impactLabel}</div>
+                </div>
+
                 <div className="project-tags">
-                  {project.tags.map((tag, index) => (
+                  {project.tags.slice(0, 3).map((tag, index) => (
                     <span key={index} className="tag">{tag}</span>
                   ))}
+                  {project.tags.length > 3 && (
+                    <span className="tag-more">+{project.tags.length - 3}</span>
+                  )}
                 </div>
+
+                <div className="project-footer">
+                  <span className="project-duration">{project.duration}</span>
+                  <button className="project-link">
+                    Details <FaArrowRight />
+                  </button>
+                </div>
+
+                <div className={`project-glow ${hoveredProject === project.id ? 'active' : ''}`}></div>
               </div>
             </div>
           ))}
         </div>
-        
-        <div className="view-all-btn">
-          <button className="primary-btn">
+
+        {/* View All Section */}
+        <div className="view-all-section">
+          <button className="view-all-btn">
             View All Projects <FaArrowRight />
           </button>
         </div>
