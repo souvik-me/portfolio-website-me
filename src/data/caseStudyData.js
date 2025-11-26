@@ -321,5 +321,91 @@ export const caseStudyData = {
             impact: 'The introduction of AI-powered documentation and SOP automation not only standardized operational excellence but also ensured continuous learning — turning each completed project into a reusable, process-improvement blueprint.',
             finalStatement: '<strong>Heartland Workforce</strong> now stands as a modern, scalable, and AI-enabled workforce management platform, capable of delivering faster, smarter, and more transparent emergency restoration services across the country.'
         }
+    },
+
+    eparisheva: {
+        id: 'eparisheva',
+        heroTitle: 'eParisheva',
+        heroHighlight: 'Hyperlocal Marketplace',
+        heroSubtitle: 'Enable small business owners to create digital storefronts and reach nearby customers.',
+        tags: ['Marketplace', 'Hyperlocal', 'Mobile-first', 'Digitization'],
+        metrics: [
+            { value: '70%', label: 'Merchants Onboarded', icon: FaRocket },
+            { value: 'High', label: 'Customer Engagement', icon: FaUsers },
+            { value: 'Fast', label: 'Fulfillment', icon: FaCheckCircle },
+            { value: '100%', label: 'Visibility', icon: FaChartLine }
+        ],
+        clientBackground: {
+            icon: FaUsers,
+            title: 'The Challenge',
+            content: [
+                'Local shop owners and service providers lacked an online presence.',
+                'They struggled with: No digital storefront, Heavy dependence on walk-ins, Limited customer reach, Manual order & inventory tracking, Zero visibility beyond their immediate area.',
+                'This led to missed revenue opportunities and inconsistent growth.'
+            ]
+        },
+        projectBackground: {
+            icon: FaDatabase,
+            title: 'Project Overview & Process',
+            content: [
+                '<strong>Goal:</strong> Enable small business owners to create digital storefronts and reach nearby customers.',
+                '<strong>Research & Discovery:</strong> Conducted merchant interviews, competitive benchmarking, and local market behavior studies. Key insights revealed merchants needed simple onboarding and customers preferred fast discovery based on locality.',
+                '<strong>UX & Flow Design:</strong> Designed key experiences for merchant signup, storefront creation, product catalog setup, and local discovery algorithms. Created wireframes and low-fi sketches.',
+                '<strong>Implementation Approach:</strong> Built a modular micro-feature architecture (storefront → catalog → orders → payment) with a mobile-first UI. Implemented location-based service discovery and a scalable backend.',
+                '<strong>My Contribution:</strong> Requirement gathering, user workflow mapping, marketplace feature design, coordination with engineering teams, UAT, and release planning.',
+                '<strong>Deliverables:</strong> BRD, FRD, Flow Diagrams, Wireframes, User stories, Acceptance criteria, Merchant & customer journey maps.'
+            ],
+            features: [
+                'Quick storefront setup for Sellers',
+                'Inventory & order management',
+                'Chat with customers',
+                'Browse nearby shops for Customers',
+                'Real-time availability & Online payments',
+                'Merchant onboarding & Analytics for Admin'
+            ],
+            conclusion: 'eParisheva successfully brought local shops and service providers into the digital economy, giving them a platform to grow, reach customers, and operate efficiently—without needing technical expertise.'
+        },
+        challenges: [
+            'Local shop owners and service providers lacked an online presence',
+            'Heavy dependence on walk-ins and limited customer reach',
+            'Manual order & inventory tracking',
+            'Zero visibility beyond their immediate area',
+            'Missed revenue opportunities and inconsistent growth'
+        ],
+        solutions: [
+            {
+                title: 'Mobile-First Hyperlocal Marketplace',
+                description: 'Allowed merchants to launch a digital storefront and sell products or services to customers nearby.'
+            },
+            {
+                title: 'For Sellers',
+                description: 'Quick storefront setup, product/service addition, inventory management, custom pricing, and chat features.'
+            },
+            {
+                title: 'For Customers',
+                description: 'Browse nearby shops, search by product/service, real-time availability, online payments, and order tracking.'
+            },
+            {
+                title: 'For Admin',
+                description: 'Merchant onboarding, marketplace monitoring, and analytics dashboard.'
+            }
+        ],
+        comparisonData: [
+            { aspect: 'Storefront', before: 'None', after: 'Digital Storefront', improvement: 'Instant Setup' },
+            { aspect: 'Reach', before: 'Walk-ins only', after: 'Hyperlocal Discovery', improvement: 'High Visibility' },
+            { aspect: 'Tracking', before: 'Manual', after: 'Automated Dashboard', improvement: 'Real-time' },
+            { aspect: 'Payments', before: 'Cash/Offline', after: 'Online Integrated', improvement: 'Seamless' }
+        ],
+        conclusion: {
+            intro: '<strong>eParisheva</strong> successfully brought local shops and service providers into the digital economy.',
+            achievements: [
+                '70% merchants created their first digital storefront',
+                'Increased visibility for local business owners',
+                'Higher customer engagement within neighbourhoods',
+                'Faster fulfilment using hyperlocal delivery workflows'
+            ],
+            impact: 'Strengthened the micro-entrepreneurship ecosystem by providing a platform to grow and operate efficiently.',
+            finalStatement: 'eParisheva stands as a vital tool for local commerce digitization.'
+        }
     }
 }

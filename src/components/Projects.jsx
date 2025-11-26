@@ -56,14 +56,14 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Customer Segmentation Model',
-      category: 'AI/ML',
-      status: 'Completed',
-      duration: '2 months',
-      description: 'Machine learning model for customer segmentation enabling targeted marketing campaigns.',
-      impact: '+45%',
-      impactLabel: 'Campaign ROI',
-      tags: ['Python', 'Machine Learning', 'Clustering', 'Analytics']
+      title: 'eParisheva – Hyperlocal Marketplace',
+      category: 'Marketplace',
+      status: 'Live',
+      duration: '3 Months',
+      description: 'Hyperlocal marketplace for local products & services enabling small business owners to create digital storefronts.',
+      impact: '70%',
+      impactLabel: 'Merchants Onboarded',
+      tags: ['Marketplace', 'Hyperlocal', 'Mobile-first', 'Digitization']
     },
     {
       id: 5,
@@ -231,6 +231,7 @@ const Projects = () => {
                     onClick={() => {
                       if (project.id === 2) navigate('/case-study/firs')
                       if (project.id === 3) navigate('/case-study/heartland')
+                      if (project.id === 4) navigate('/case-study/eparisheva')
                     }}
                   >
                     Details <FaArrowRight />
