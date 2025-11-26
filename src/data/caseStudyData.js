@@ -208,5 +208,118 @@ export const caseStudyData = {
             impact: 'The portal has become the single source of truth for VAT compliance, providing accurate insights into revenue trends and collection performance.',
             finalStatement: 'The <strong>FIRS Tax Direct Portal</strong> now stands as a landmark achievement in digital tax governance, positioning Nigeria at the forefront of tax automation and financial transparency in Africa.'
         }
+    },
+
+    heartland: {
+        id: 'heartland',
+        heroTitle: 'Digital Transformation of the Heartland Workforce',
+        heroHighlight: 'Platform',
+        heroSubtitle: 'How AI-powered automation and intelligent SOP generation transformed emergency restoration workforce management across the United States',
+        tags: ['Workforce Management', 'AI/ML', 'Real-time Tracking', 'Automation', 'SOP Generation'],
+
+        metrics: [
+            { value: '60%', label: 'Faster Project Closure', icon: FaRocket },
+            { value: '45%', label: 'Higher Lead Conversion', icon: FaChartLine },
+            { value: '40%', label: 'Faster Dispatch', icon: FaCheckCircle },
+            { value: '100%', label: 'Data Visibility', icon: FaDatabase }
+        ],
+
+        clientBackground: {
+            icon: FaUsers,
+            title: 'Client Background',
+            content: [
+                '<strong>Heartland Workforce</strong> is a U.S.-based emergency restoration and workforce management platform connecting customers with skilled technicians for restoration and repair services across flood, fire, and storm damage scenarios.',
+                'The company operates through a network of referral partners, dispatchers, technicians, and administrators, ensuring timely response and recovery for affected customers.',
+                'As service volumes and partner networks expanded, Heartland sought to modernize its existing system into a scalable, automated, and intelligence-driven digital platform to streamline operations and enhance service transparency.'
+            ]
+        },
+
+        projectBackground: {
+            icon: FaDatabase,
+            title: 'Project Background',
+            content: [
+                'The project\'s goal was to upgrade the existing Heartland Workforce system into a unified, intelligent, and automated platform.',
+                'The earlier system lacked automation and integration across critical business areas such as customer onboarding, dispatch management, document control, and payment processing.',
+                'The modernization initiative aimed to bring real-time visibility, automation, and AI-assisted documentation into daily operations:'
+            ],
+            features: [
+                'Centralized customer intake from multiple channels',
+                'Real-time dispatcher dashboard with calendar and map views',
+                'Digital contract signing and documentation',
+                'Automated payment processing and commission calculation',
+                'AI-powered SOP generation from completed projects',
+                'Role-based access control for all user types'
+            ],
+            conclusion: 'This transformation ensured faster service delivery, accurate tracking, and improved coordination among all stakeholders.'
+        },
+
+        challenges: [
+            'Fragmented Customer Intake: Leads from multiple channels (calls, Google Ads, referral partners) were handled manually, leading to data duplication and missed opportunities',
+            'No Contract or Documentation Automation: Manual job agreement signing and paper-based completion forms delayed project closure',
+            'Absence of Online Payments: Payments and refunds were processed offline, causing financial reconciliation issues',
+            'Lack of Dispatcher Visibility: Dispatchers had no centralized calendar or map view to manage technician schedules or real-time location tracking',
+            'No Technician & Equipment Tracking: Field operations lacked visibility into resource allocation and availability',
+            'Missing Commission & Refund Logic: Partner and technician commissions were handled manually without calculation transparency',
+            'No Role-Based User Management: Admin, dispatcher, and partner users operated under shared, unsecured access layers',
+            'No Estimation & Taxation Process: Projects lacked structured estimation flows and tax automation',
+            'No Standard SOP Framework: Project steps varied by dispatcher, with no documented process consistency'
+        ],
+
+        solutions: [
+            {
+                title: 'Unified Customer Intake System',
+                description: 'Centralized all lead sources — phone, ads, and referrals — into a single dashboard, auto-tagged by origin for performance tracking.'
+            },
+            {
+                title: 'Dedicated Dispatcher Dashboard',
+                description: 'Introduced calendar scheduling, real-time map view, and technician availability tracking for optimized assignment and monitoring.'
+            },
+            {
+                title: 'E-Signature & Digital Documentation',
+                description: 'Enabled secure electronic contract signing and job completion acknowledgment with integrated timestamped records.'
+            },
+            {
+                title: 'Online Payment & Refund Automation',
+                description: 'Integrated Stripe payment gateway for instant payments, refunds, and commission reconciliation.'
+            },
+            {
+                title: 'Technician & Equipment Tracking',
+                description: 'Implemented real-time status tracking, calendar-based workload visualization, and equipment allocation management.'
+            },
+            {
+                title: 'Commission & Taxation Automation',
+                description: 'Automated calculation of partner and technician commissions along with tax-inclusive estimation and invoicing workflows.'
+            },
+            {
+                title: 'AI-Powered Documentation & SOP Engine',
+                description: 'Introduced an AI-driven module that automatically generates Standard Operating Procedures (SOPs), checklists, and task documentation from completed projects. The AI engine summarizes key project actions, identifies missing compliance steps, and standardizes best practices for future use — improving knowledge retention and onboarding efficiency.'
+            },
+            {
+                title: 'Role-Based User Access',
+                description: 'Secure access levels for Admin, Dispatcher, Partner, and Technician with tailored dashboards, metrics, and permissions.'
+            }
+        ],
+
+        comparisonData: [
+            { aspect: 'Lead Management', before: 'Scattered & manual', after: 'Centralized multi-channel intake', improvement: '↑ 45% conversion' },
+            { aspect: 'Dispatching', before: 'Manual coordination', after: 'Real-time dashboard + map-based scheduling', improvement: '↑ 40% faster' },
+            { aspect: 'Documentation', before: 'Paper-based', after: 'Digital e-signing & AI SOP generator', improvement: '↑ 60% faster closure' },
+            { aspect: 'Payments & Refunds', before: 'Offline & delayed', after: 'Instant Stripe integration', improvement: '↓ 60% reconciliation time' },
+            { aspect: 'Technician Tracking', before: 'Absent', after: 'Real-time calendar visibility', improvement: '↑ 30% utilization' },
+            { aspect: 'Partner Commission', before: 'Manual calculation', after: 'Automated transparent tracking', improvement: '↑ 100% accuracy' },
+            { aspect: 'Customer Satisfaction', before: 'Moderate', after: 'Transparent progress & faster service', improvement: '↑ 35% satisfaction' }
+        ],
+
+        conclusion: {
+            intro: 'The digital transformation of the <strong>Heartland Workforce Platform</strong> successfully replaced manual, disconnected workflows with an intelligent, automated, and AI-assisted ecosystem. With centralized customer intake, dispatcher management, real-time technician visibility, and automated payments, the organization now operates as a data-driven restoration network.',
+            achievements: [
+                '60% reduction in manual administrative workload',
+                '45% higher customer conversion rate',
+                '40% improvement in service turnaround time',
+                '100% increase in data visibility across departments'
+            ],
+            impact: 'The introduction of AI-powered documentation and SOP automation not only standardized operational excellence but also ensured continuous learning — turning each completed project into a reusable, process-improvement blueprint.',
+            finalStatement: '<strong>Heartland Workforce</strong> now stands as a modern, scalable, and AI-enabled workforce management platform, capable of delivering faster, smarter, and more transparent emergency restoration services across the country.'
+        }
     }
 }

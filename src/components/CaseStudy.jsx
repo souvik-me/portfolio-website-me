@@ -100,12 +100,16 @@ const CaseStudy = () => {
                         {data.projectBackground.content.map((paragraph, index) => (
                             <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                         ))}
-                        <ul className="feature-list">
-                            {data.projectBackground.features.map((feature, index) => (
-                                <li key={index}>{feature}</li>
-                            ))}
-                        </ul>
-                        <p dangerouslySetInnerHTML={{ __html: data.projectBackground.conclusion }} />
+                        {data.projectBackground.features && data.projectBackground.features.length > 0 && (
+                            <ul className="feature-list">
+                                {data.projectBackground.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {data.projectBackground.conclusion && (
+                            <p dangerouslySetInnerHTML={{ __html: data.projectBackground.conclusion }} />
+                        )}
                     </div>
                 </div>
             </section>

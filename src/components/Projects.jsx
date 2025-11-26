@@ -166,7 +166,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <button className="featured-cta" onClick={() => navigate('/case-study')}>
+              <button className="featured-cta" onClick={() => navigate('/case-study/lirs')}>
                 View Case Study <FaArrowRight />
               </button>
             </div>
