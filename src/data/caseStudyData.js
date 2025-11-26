@@ -577,5 +577,87 @@ export const caseStudyData = {
             impact: 'Reimagines e-commerce setup as a guided, AI-assisted journey instead of a complex configuration exercise.',
             finalStatement: 'I helped design and define an AI-first e-commerce platform that turns a simple prompt into a launch-ready online store.'
         }
+    },
+
+    jalshri: {
+        id: 'jalshri',
+        heroTitle: 'jalshri.com',
+        heroHighlight: 'Dropshipping-Based Organic Products Marketplace',
+        heroSubtitle: 'Building a seamless dropshipping engine for organic & sustainable products. Jalshri.com connects verified organic suppliers with customers through an automated dropshipping model.',
+        tags: ['E-Commerce', 'Dropshipping', 'Organic', 'Automation'],
+        metrics: [
+            { value: '100%', label: 'Dropshipping Fulfillment', icon: FaRocket },
+            { value: '40%', label: 'Faster Order Processing', icon: FaCheckCircle },
+            { value: 'High', label: 'Organic Product Trust', icon: FaUsers },
+            { value: 'Better', label: 'Supplier Performance', icon: FaChartLine }
+        ],
+        clientBackground: {
+            icon: FaUsers,
+            title: 'The Challenge',
+            content: [
+                'Organic product buyers want trust, and organic suppliers want reach. But the system had gaps:',
+                'No real-time stock visibility from suppliers, Manual order forwarding, Quality consistency issues, No centralized inventory or fulfilment tracking, and Customer delivery timelines varied by supplier.',
+                'Challenge: Build a dependable, automated, supplier-driven fulfilment system for organic goods.'
+            ]
+        },
+        projectBackground: {
+            icon: FaDatabase,
+            title: 'Project Overview & Process',
+            content: [
+                '<strong>Research & Discovery:</strong> Interviewed certified organic farmers and health-conscious shoppers. Benchmarked dropshipping models and mapped process flows. Insights showed buyers need transparency and suppliers need a lightweight panel.',
+                '<strong>Solution Concept:</strong> A turnkey dropshipping ecosystem for organic products with automated order routing and supplier management.',
+                '<strong>Experience & Workflows:</strong> Designed flows for Supplier onboarding, Product listing, Customer purchase → automatic supplier assignment, and Returns & replacements.',
+                '<strong>My Role:</strong> Requirement gathering with founders & suppliers, Designing dropshipping workflows end-to-end, BRD/FRD/User stories, UX collaboration, UAT, and Operational advisory.'
+            ],
+            features: [
+                'Supplier Management: Simple onboarding, category mapping, and stock updates',
+                'Automated Order Routing: System identifies supplier and sends order instantly',
+                'Customer Experience: Transparent product pages with origin & certification details',
+                'Admin Dashboard: Supplier performance tracking, commission, and settlements'
+            ],
+            conclusion: 'jalshri.com became a zero-inventory, supplier-powered marketplace that delivers genuine organic products directly from source to customer.'
+        },
+        challenges: [
+            'No real-time stock visibility from suppliers',
+            'Manual order forwarding and low operational automation',
+            'Quality consistency issues',
+            'No centralized inventory or fulfilment tracking',
+            'Customer delivery timelines varied by supplier'
+        ],
+        solutions: [
+            {
+                title: 'Supplier Management',
+                description: 'Simple onboarding with certification uploads, organic category mapping, and direct stock & availability updates.'
+            },
+            {
+                title: 'Automated Order Routing',
+                description: 'System identifies the right supplier, sends order instantly to supplier panel, and shares auto-tracking with customer.'
+            },
+            {
+                title: 'Customer Experience Layer',
+                description: 'Clean, transparent product pages with origin, sourcing, and certification details. Full tracking + return workflow.'
+            },
+            {
+                title: 'Admin Dashboard',
+                description: 'Supplier performance tracking, commission, settlements, payouts, and category-level insights.'
+            }
+        ],
+        comparisonData: [
+            { aspect: 'Fulfillment', before: 'Warehouse-based', after: '100% Dropshipping', improvement: 'Zero Cost' },
+            { aspect: 'Processing', before: 'Manual Forwarding', after: 'Automated Routing', improvement: '40% Faster' },
+            { aspect: 'Trust', before: 'Low Transparency', after: 'Origin & Certs', improvement: 'High Conversion' },
+            { aspect: 'Accountability', before: 'Low', after: 'SLA Dashboards', improvement: 'Better Performance' }
+        ],
+        conclusion: {
+            intro: '<strong>jalshri.com</strong> became a zero-inventory, supplier-powered marketplace.',
+            achievements: [
+                '100% Dropshipping Fulfilment (Zero warehouse cost)',
+                '40% Faster Order Processing via routing automation',
+                'Increased Organic Product Trust via transparency',
+                'Better Supplier Performance via SLA dashboards'
+            ],
+            impact: 'The system now offers trust, transparency, and speed—the most crucial pillars for organic retail.',
+            finalStatement: 'jalshri.com connects verified organic suppliers with customers through an automated dropshipping model.'
+        }
     }
 }

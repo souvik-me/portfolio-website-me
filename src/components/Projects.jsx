@@ -89,14 +89,14 @@ const Projects = () => {
     },
     {
       id: 7,
-      title: 'Sales Performance Tracker',
-      category: 'Analytics',
-      status: 'Completed',
-      duration: '2 months',
-      description: 'Interactive dashboard for tracking sales team performance, targets, and conversion metrics.',
-      impact: '+28%',
-      impactLabel: 'Sales Growth',
-      tags: ['Tableau', 'SQL', 'Analytics']
+      title: 'jalshri.com – Dropshipping Marketplace',
+      category: 'E-Commerce',
+      status: 'Live',
+      duration: '3-4 months',
+      description: 'Dropshipping-based organic products marketplace connecting verified suppliers with customers through an automated fulfillment engine.',
+      impact: '100%',
+      impactLabel: 'Dropshipping Fulfillment',
+      tags: ['E-Commerce', 'Dropshipping', 'Organic', 'Automation']
     }
   ]
 
@@ -234,6 +234,7 @@ const Projects = () => {
                       if (project.id === 4) navigate('/case-study/eparisheva')
                       if (project.id === 5) navigate('/case-study/polimeraas')
                       if (project.id === 6) navigate('/case-study/fastforge')
+                      if (project.id === 7) navigate('/case-study/jalshri')
                     }}
                   >
                     Details <FaArrowRight />
