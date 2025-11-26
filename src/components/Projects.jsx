@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FaArrowRight, FaCheckCircle, FaChartLine, FaShieldAlt, FaDatabase, FaCog, FaRocket } from 'react-icons/fa'
 import './Projects.css'
 
 const Projects = () => {
+  const navigate = useNavigate()
   const [activeFilter, setActiveFilter] = useState('All')
   const [hoveredProject, setHoveredProject] = useState(null)
 
@@ -32,14 +34,14 @@ const Projects = () => {
   const projects = [
     {
       id: 2,
-      title: 'Revenue Analytics Dashboard',
-      category: 'Analytics',
-      status: 'Completed',
-      duration: '3 months',
-      description: 'Comprehensive Power BI dashboard tracking revenue metrics, KPIs, and business performance indicators.',
-      impact: '+35%',
-      impactLabel: 'Revenue Insights',
-      tags: ['Power BI', 'SQL', 'Python', 'Analytics']
+      title: 'FIRS Tax Direct Portal',
+      category: 'FinTech',
+      status: 'Live in Production',
+      duration: '6 months',
+      description: 'National VAT data management platform automating VAT reporting from Payment Service Providers with real-time validation and analytics.',
+      impact: '95%',
+      impactLabel: 'Data Accuracy',
+      tags: ['FinTech', 'VAT Automation', 'API Integration', 'Power BI', 'SQL']
     },
     {
       id: 3,
@@ -164,7 +166,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <button className="featured-cta">
+              <button className="featured-cta" onClick={() => navigate('/case-study')}>
                 View Case Study <FaArrowRight />
               </button>
             </div>
