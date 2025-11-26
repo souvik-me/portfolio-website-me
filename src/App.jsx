@@ -27,7 +27,7 @@ function App() {
             <Footer />
           </>
         } />
-        <Route path="/case-study" element={<CaseStudy />} />
+        <Route path="/case-study/:projectId" element={<CaseStudy />} />
       </Routes>
     </div>
   )

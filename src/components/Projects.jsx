@@ -45,14 +45,14 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Supply Chain Optimization',
+      title: 'Heartland Workforce Platform',
       category: 'Optimization',
-      status: 'Completed',
-      duration: '4 months',
-      description: 'End-to-end analysis and redesign of supply chain processes, reducing operational costs significantly.',
-      impact: '-30%',
-      impactLabel: 'Cost Reduction',
-      tags: ['Process Mining', 'Tableau', 'Optimization']
+      status: 'Live in Production',
+      duration: '8 months',
+      description: 'AI-powered emergency restoration workforce management platform with automated dispatch, real-time tracking, and intelligent SOP generation.',
+      impact: '60%',
+      impactLabel: 'Faster Project Closure',
+      tags: ['Workforce Management', 'AI/ML', 'Real-time Tracking', 'Automation']
     },
     {
       id: 4,
