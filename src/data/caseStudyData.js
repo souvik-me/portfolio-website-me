@@ -490,5 +490,92 @@ export const caseStudyData = {
             impact: 'Directly improved profit margins and reduced wastage through complete visibility and better control.',
             finalStatement: 'The system provided a unified platform for Warehouse, Distribution, and Store operations.'
         }
+    },
+
+    fastforge: {
+        id: 'fastforge',
+        heroTitle: 'FastForge.ai',
+        heroHighlight: 'AI-Based E-Commerce Platform Builder',
+        heroSubtitle: 'Launch e-commerce stores in minutes, not weeks. FastForge.ai helps entrepreneurs create fully functional online stores using a simple AI prompt.',
+        tags: ['SaaS', 'E-Commerce', 'AI', 'Automation'],
+        metrics: [
+            { value: '10x', label: 'Faster Store Launch', icon: FaRocket },
+            { value: '80%', label: 'Less Manual Content Work', icon: FaCheckCircle },
+            { value: '60%', label: 'Faster Catalog Onboarding', icon: FaDatabase },
+            { value: 'High', label: 'Adoption Rate', icon: FaChartLine }
+        ],
+        clientBackground: {
+            icon: FaUsers,
+            title: 'The Challenge',
+            content: [
+                'Launching an e-commerce store traditionally involves complex technical setup (hosting, themes, plugins), time-consuming catalog creation, and dependency on designers & developers.',
+                'Non-technical founders and small businesses needed a faster, easier, and more guided way to launch and manage online stores—without understanding code, design, or complex platforms.',
+                'This resulted in slow go-live timelines and missed opportunities for small teams.'
+            ]
+        },
+        projectBackground: {
+            icon: FaDatabase,
+            title: 'Project Overview & Process',
+            content: [
+                '<strong>Research & Discovery:</strong> Interviewed small business owners and D2C brands, mapped the "going online" journey, and benchmarked existing platforms like Shopify and Wix. Found that users struggle most with content/catalog setup and feel overwhelmed by options.',
+                '<strong>Solution Concept:</strong> "Tell the system what my business is, and it sets up the store for me." A prompt-to-store generator.',
+                '<strong>User Flows:</strong> Designed flows for Onboarding (Sign up → Describe business → AI generation), Catalog Setup (Text/CSV → AI content), and Publish & Go-Live.',
+                '<strong>My Role:</strong> Conducted stakeholder interviews, defined product goals, created BRD/FRD for AI builder and editor, designed user journeys, collaborated with AI/ML and UX teams, and led UAT for prompt-to-store logic.'
+            ],
+            features: [
+                'AI Store Builder: Site structure, brand style, and copy from text prompts',
+                'Catalog Automation: Bulk product creation via prompts or CSV with AI content',
+                'Storefront Editor: Drag-and-drop with AI layout recommendations',
+                'E-Commerce Engine: Inventory, payments, shipping, and coupons',
+                'Growth & Intelligence: AI marketing copy and sales analytics'
+            ],
+            conclusion: 'FastForge.ai reimagines e-commerce setup as a guided, AI-assisted journey, enabling founders to focus on their business while AI handles the technical setup.'
+        },
+        challenges: [
+            'Complex technical setup (hosting, themes, domains)',
+            'Time-consuming catalog creation & content writing',
+            'Dependency on designers & developers',
+            'Slow go-live timelines for small teams',
+            'Overwhelming options in existing platforms'
+        ],
+        solutions: [
+            {
+                title: 'Module 1: AI Store Builder',
+                description: 'User types a description, and AI generates site structure, brand style, copy, and headings in minutes.'
+            },
+            {
+                title: 'Module 2: Catalog & Content Automation',
+                description: 'Bulk product creation via text prompts or CSV. AI generates titles, descriptions, SEO tags, and category mapping.'
+            },
+            {
+                title: 'Module 3: Storefront Editor',
+                description: 'Drag-and-drop editor with AI recommendations for layouts, headlines, and visual hierarchy.'
+            },
+            {
+                title: 'Module 4: E-Commerce Engine',
+                description: 'Production-ready engine with inventory management, payment gateways, shipping profiles, and discounts.'
+            },
+            {
+                title: 'Module 5: Growth & Intelligence',
+                description: 'AI-generated marketing copy, customer segmentation, and conversion improvement suggestions.'
+            }
+        ],
+        comparisonData: [
+            { aspect: 'Store Launch', before: '1-2 Weeks', after: 'Under 1 Hour', improvement: '10x Faster' },
+            { aspect: 'Content Creation', before: 'Manual Copywriting', after: 'AI-Generated', improvement: '80% Less Work' },
+            { aspect: 'Catalog Setup', before: 'Manual Entry', after: 'Bulk/Prompt Import', improvement: '60% Faster' },
+            { aspect: 'Technical Skill', before: 'Required', after: 'None Needed', improvement: 'High Adoption' }
+        ],
+        conclusion: {
+            intro: '<strong>FastForge.ai</strong> turns a simple prompt into a launch-ready online store.',
+            achievements: [
+                '10x Faster Store Launch (from weeks to minutes)',
+                '80% Less Manual Content Work via AI generation',
+                '60% Faster Catalog Onboarding',
+                'Empowered non-technical founders to launch without developers'
+            ],
+            impact: 'Reimagines e-commerce setup as a guided, AI-assisted journey instead of a complex configuration exercise.',
+            finalStatement: 'I helped design and define an AI-first e-commerce platform that turns a simple prompt into a launch-ready online store.'
+        }
     }
 }

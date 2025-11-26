@@ -78,14 +78,14 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: 'Inventory Management Dashboard',
-      category: 'Optimization',
-      status: 'Completed',
-      duration: '3 months',
-      description: 'Real-time inventory tracking and optimization dashboard reducing stockouts and overstock.',
-      impact: '-25%',
-      impactLabel: 'Inventory Costs',
-      tags: ['Power BI', 'SQL', 'Optimization']
+      title: 'FastForge.ai – AI Store Builder',
+      category: 'SaaS / AI',
+      status: 'Live',
+      duration: '4-6 months',
+      description: 'AI-powered e-commerce platform builder that helps entrepreneurs launch fully functional online stores in minutes using simple text prompts.',
+      impact: '10x',
+      impactLabel: 'Faster Launch',
+      tags: ['AI/ML', 'SaaS', 'E-Commerce', 'Automation']
     },
     {
       id: 7,
@@ -233,6 +233,7 @@ const Projects = () => {
                       if (project.id === 3) navigate('/case-study/heartland')
                       if (project.id === 4) navigate('/case-study/eparisheva')
                       if (project.id === 5) navigate('/case-study/polimeraas')
+                      if (project.id === 6) navigate('/case-study/fastforge')
                     }}
                   >
                     Details <FaArrowRight />
