@@ -67,14 +67,14 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Financial Forecasting System',
-      category: 'Analytics',
-      status: 'Completed',
-      duration: '5 months',
-      description: 'Predictive analytics system for financial forecasting and budget planning with high accuracy.',
-      impact: '95%',
-      impactLabel: 'Forecast Accuracy',
-      tags: ['Python', 'Time Series', 'Forecasting', 'SQL']
+      title: 'Polimeraas – Fresh Produce System',
+      category: 'Inventory & Distribution',
+      status: 'Live',
+      duration: '3 Months',
+      description: 'Inventory management and multistore tracking system for fresh produce distribution, reducing wastage and improving stock accuracy.',
+      impact: '35%',
+      impactLabel: 'Reduction in Wastage',
+      tags: ['Inventory Management', 'Supply Chain', 'Real-time Tracking', 'Distribution']
     },
     {
       id: 6,
@@ -232,6 +232,7 @@ const Projects = () => {
                       if (project.id === 2) navigate('/case-study/firs')
                       if (project.id === 3) navigate('/case-study/heartland')
                       if (project.id === 4) navigate('/case-study/eparisheva')
+                      if (project.id === 5) navigate('/case-study/polimeraas')
                     }}
                   >
                     Details <FaArrowRight />

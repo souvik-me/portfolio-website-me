@@ -407,5 +407,88 @@ export const caseStudyData = {
             impact: 'Strengthened the micro-entrepreneurship ecosystem by providing a platform to grow and operate efficiently.',
             finalStatement: 'eParisheva stands as a vital tool for local commerce digitization.'
         }
+    },
+
+    polimeraas: {
+        id: 'polimeraas',
+        heroTitle: 'Polimeraas',
+        heroHighlight: 'Fresh Produce Inventory & Distribution System',
+        heroSubtitle: 'Inventory Management, Multistore Tracking & Fresh Produce Distribution',
+        tags: ['Inventory Management', 'Supply Chain', 'Real-time Tracking', 'Distribution'],
+        metrics: [
+            { value: '35%', label: 'Reduction in Wastage', icon: FaChartLine },
+            { value: 'Fast', label: 'Daily Distribution', icon: FaRocket },
+            { value: '22%', label: 'Improved Stock Accuracy', icon: FaCheckCircle },
+            { value: 'High', label: 'Store Performance', icon: FaDatabase }
+        ],
+        clientBackground: {
+            icon: FaUsers,
+            title: 'The Challenge',
+            content: [
+                'Fresh fruits & vegetables are highly perishable and require precise, fast-moving inventory control.',
+                'The existing process suffered from: No real-time stock visibility between warehouse & stores, High spoilage due to poor rotation & slow distribution, Manual stock transfers causing mismatches, Difficulty forecasting demand across multiple locations, and Lack of centralized tracking for procurement, quality, and dispatch.',
+                'This led to stockouts, wastage, and operational inefficiencies.'
+            ]
+        },
+        projectBackground: {
+            icon: FaDatabase,
+            title: 'Project Overview & Process',
+            content: [
+                '<strong>Research & Understanding:</strong> Conducted on-ground store & warehouse shadowing, interviews with procurement managers, and mapped the full supply chain lifecycle. Identified patterns in spoilage, demand, and peak timings.',
+                '<strong>Key Insights:</strong> Inventory needed batch-level tracking, stores had different sales velocities, distribution cycles required automation, and shelf-life management was critical.',
+                '<strong>UX & Flow Design:</strong> Designed clear workflows for procurement, QC, warehouse intake, stock allocation, daily dispatch, store-level operations, and end-of-day reconciliation.',
+                '<strong>Implementation Approach:</strong> Modular feature rollout starting with core inventory, real-time syncing with store-level devices, barcode/QR-based stock movement, and analytics for wastage & demand.',
+                '<strong>My Role:</strong> Requirement Discovery & Process Mapping, System Workflow Design, BRD/FRD/User Stories, Cross-team coordination, and UAT & rollout management.'
+            ],
+            features: [
+                'Batch tracking & FIFO logic for fresh produce',
+                'Live stock dashboard & Reorder alerts',
+                'Auto-generated dispatch lists & Route optimization',
+                'Inward/outward scanning & Auto reorder recommendations'
+            ],
+            conclusion: 'This system transformed how Polimeraas handled fresh-produce operations by giving them complete visibility, better control, and faster multistore movement.'
+        },
+        challenges: [
+            'No real-time stock visibility between warehouse & stores',
+            'High spoilage due to poor rotation & slow distribution',
+            'Manual stock transfers causing mismatches',
+            'Difficulty forecasting demand across multiple locations',
+            'Lack of centralized tracking for procurement, quality, and dispatch'
+        ],
+        solutions: [
+            {
+                title: 'Module 1: Inventory Management',
+                description: 'Batch tracking, Real-time stock sync, Spoilage logging, FIFO logic for fresh produce, and Daily stock reconciliation.'
+            },
+            {
+                title: 'Module 2: Multistore Tracking',
+                description: 'Live stock dashboard, Reorder alerts, Sales velocity insights, and Variance & shrinkage reports.'
+            },
+            {
+                title: 'Module 3: Distribution & Transfers',
+                description: 'Procurement intake & grading, Auto-generated dispatch lists, In-transit tracking, and Route optimization.'
+            },
+            {
+                title: 'Module 4: Store Operations',
+                description: 'Inward/outward scanning, Opening/closing stock, Shelf vs backroom stock, and Auto reorder recommendations.'
+            }
+        ],
+        comparisonData: [
+            { aspect: 'Wastage', before: 'High Spoilage', after: 'Shelf-life Tracking', improvement: '↓ 35% Wastage' },
+            { aspect: 'Distribution', before: 'Manual/Slow', after: 'Automated Dispatch', improvement: 'Faster Cycles' },
+            { aspect: 'Stock Accuracy', before: 'Mismatches', after: 'Scanning-based', improvement: '↑ 22% Accuracy' },
+            { aspect: 'Visibility', before: 'None', after: 'Centralized Dashboard', improvement: 'Real-time' }
+        ],
+        conclusion: {
+            intro: '<strong>Polimeraas</strong> successfully transformed its fresh-produce operations.',
+            achievements: [
+                '35% Reduction in Wastage via shelf-life tracking',
+                'Faster Daily Distribution Cycles with automated dispatch',
+                '22% Improvement in Stock Accuracy via scanning',
+                'Consistent Store Performance with better replenishment'
+            ],
+            impact: 'Directly improved profit margins and reduced wastage through complete visibility and better control.',
+            finalStatement: 'The system provided a unified platform for Warehouse, Distribution, and Store operations.'
+        }
     }
 }
