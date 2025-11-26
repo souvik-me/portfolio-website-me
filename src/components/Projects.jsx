@@ -226,7 +226,13 @@ const Projects = () => {
 
                 <div className="project-footer">
                   <span className="project-duration">{project.duration}</span>
-                  <button className="project-link">
+                  <button
+                    className="project-link"
+                    onClick={() => {
+                      if (project.id === 2) navigate('/case-study/firs')
+                      if (project.id === 3) navigate('/case-study/heartland')
+                    }}
+                  >
                     Details <FaArrowRight />
                   </button>
                 </div>
