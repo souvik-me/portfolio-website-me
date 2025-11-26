@@ -9,6 +9,7 @@ import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CaseStudy from './components/CaseStudy'
+import BlogPost from './components/BlogPost'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           </>
         } />
         <Route path="/case-study/:projectId" element={<CaseStudy />} />
+        <Route path="/blog/:postId" element={<BlogPost />} />
       </Routes>
     </div>
   )
