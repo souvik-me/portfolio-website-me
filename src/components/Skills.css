@@ -186,21 +186,27 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Bubble-like styling for tool icons */
 .tool-icon {
-  font-size: 40px;
+  font-size: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
-  background: #f8f9fa;
-  border-radius: 15px;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 5px;
 }
 
 .tool-card:hover .tool-icon {
-  background: #e8e8ff;
-  transform: scale(1.1);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .tool-card p {

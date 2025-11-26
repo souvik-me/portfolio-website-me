@@ -157,8 +157,9 @@ const Skills = () => {
         </div>
 
         <div className="tools-section">
-          <h3>BUSINESS ANALYSIS TOOLS</h3>
+          <h3>Tools I'm Using</h3>
           <div className="tools-grid-skills">
+            {/* Business Analysis Tools */}
             <div className="tool-card">
               <div className="tool-icon">📊</div>
               <p>Power BI</p>
@@ -179,12 +180,8 @@ const Skills = () => {
               <div className="tool-icon">🎨</div>
               <p>Lucidchart</p>
             </div>
-          </div>
-        </div>
 
-        <div className="tools-section">
-          <h3>PROJECT MANAGEMENT TOOLS</h3>
-          <div className="tools-grid-skills">
+            {/* Project Management Tools */}
             <div className="tool-card">
               <div className="tool-icon">◆</div>
               <p>Jira</p>
@@ -205,12 +202,8 @@ const Skills = () => {
               <div className="tool-icon">✓</div>
               <p>ClickUp</p>
             </div>
-          </div>
-        </div>
 
-        <div className="tools-section">
-          <h3>OTHER TOOLS</h3>
-          <div className="tools-grid-skills">
+            {/* Other Tools */}
             <div className="tool-card">
               <div className="tool-icon">🎨</div>
               <p>Figma</p>
@@ -231,12 +224,8 @@ const Skills = () => {
               <div className="tool-icon">📓</div>
               <p>Notion</p>
             </div>
-          </div>
-        </div>
 
-        <div className="tools-section">
-          <h3>AI TOOLS</h3>
-          <div className="tools-grid-skills">
+            {/* AI Tools */}
             <div className="tool-card">
               <div className="tool-icon">🤖</div>
               <p>ChatGPT</p>
