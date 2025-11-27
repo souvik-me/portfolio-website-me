@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCheckCircle, FaBolt, FaUsers, FaAward, FaUniversity, FaHospital, FaShoppingCart, FaLaptopCode, FaIndustry, FaBriefcase } from 'react-icons/fa'
+import { FaCheckCircle, FaBolt, FaUsers, FaAward, FaHospital, FaShoppingCart, FaLaptopCode, FaIndustry, FaBriefcase } from 'react-icons/fa'
 import './About.css'
 
 const About = () => {
@@ -77,12 +77,6 @@ const About = () => {
       <div className="domains-section">
         <h3>DOMAINS I'VE WORKED ON</h3>
         <div className="domains-grid">
-          <div className="domain-card">
-            <div className="domain-icon">
-              <FaUniversity />
-            </div>
-            <p>Finance and Banking</p>
-          </div>
           <div className="domain-card">
             <div className="domain-icon">
               <FaHospital />

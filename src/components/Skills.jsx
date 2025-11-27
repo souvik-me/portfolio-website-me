@@ -145,7 +145,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="certifications">
+        {/* <div className="certifications">
           <h3>Certifications</h3>
           <div className="cert-list">
             {certifications.map((cert, index) => (
@@ -154,96 +154,76 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="tools-section">
           <h3>Tools I'm Using</h3>
           <div className="tools-grid-skills">
             {/* Business Analysis Tools */}
             <div className="tool-card">
-              <div className="tool-icon">📊</div>
               <p>Power BI</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📈</div>
               <p>Tableau</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📗</div>
               <p>Excel</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📐</div>
               <p>Visio</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">🎨</div>
               <p>Lucidchart</p>
             </div>
 
             {/* Project Management Tools */}
             <div className="tool-card">
-              <div className="tool-icon">◆</div>
               <p>Jira</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">⚪</div>
               <p>Asana</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📋</div>
               <p>Trello</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📅</div>
               <p>Monday.com</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">✓</div>
               <p>ClickUp</p>
             </div>
 
             {/* Other Tools */}
             <div className="tool-card">
-              <div className="tool-icon">🎨</div>
               <p>Figma</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">🖼️</div>
               <p>Miro</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📝</div>
               <p>Confluence</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">💬</div>
               <p>Slack</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">📓</div>
               <p>Notion</p>
             </div>
 
             {/* AI Tools */}
             <div className="tool-card">
-              <div className="tool-icon">🤖</div>
               <p>ChatGPT</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">💻</div>
               <p>GitHub Copilot</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">🧠</div>
               <p>Claude</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">✨</div>
               <p>Gemini</p>
             </div>
             <div className="tool-card">
-              <div className="tool-icon">🎨</div>
               <p>Midjourney</p>
             </div>
           </div>

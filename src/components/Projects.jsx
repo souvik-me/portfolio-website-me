@@ -115,7 +115,7 @@ const Projects = () => {
         </div>
 
         <h2 className="section-title">
-          Featured <span className="gradient-text">Projects</span>
+          <span className="gradient-text">Featured Projects</span>
         </h2>
 
         <p className="section-subtitle">

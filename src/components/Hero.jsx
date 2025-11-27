@@ -21,18 +21,17 @@ const Hero = () => {
           <div className="hero-badge">
             <FaStar size={14} /> Available for new projects
           </div>
-          
+
           <h1 className="hero-title">
             Transforming<br />
             <span className="rotating-word">{words[currentWord]}</span><br />
             into Action
           </h1>
-          
+
           <p className="hero-description">
-            Business Analyst specializing in turning complex data into clear, 
-            actionable strategies that drive measurable business growth.
+            Driven by curiosity and a love for problem-solving, I bridge business needs with intelligent, data-backed solutions. I thrive on simplifying tough workflows, enhancing user experiences, and crafting strategies that deliver measurable impact.
           </p>
-          
+
           <div className="hero-buttons">
             <a href="#projects" className="primary-btn">
               View My Work <FaArrowRight />
@@ -41,7 +40,7 @@ const Hero = () => {
               Get in Touch
             </a>
           </div>
-          
+
           <div className="hero-stats">
             <div className="stat-item">
               <h3>6+</h3>
@@ -57,7 +56,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="hero-image-section">
           <div className="hero-card ai-card">
             <FaBrain />
@@ -66,11 +65,11 @@ const Hero = () => {
               <p>Analytics</p>
             </div>
           </div>
-          
+
           <div className="hero-image">
             <img src="/src/assets/images/hero-image.jpg" alt="Professional Business Analyst" />
           </div>
-          
+
           <div className="hero-card success-card">
             <div className="success-icon">📈</div>
             <div>

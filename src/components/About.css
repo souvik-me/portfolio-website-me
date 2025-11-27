@@ -90,34 +90,21 @@
 
 .domains-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px 15px;
-  max-width: 1200px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 20px;
+  max-width: 1000px;
   margin: 0 auto;
-  align-items: start;
+  align-items: center;
 }
 
 .domain-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 15px 10px;
-  transition: transform 0.3s ease;
-}
-
-/* Staggered layout - top row */
-.domain-card:nth-child(1),
-.domain-card:nth-child(3),
-.domain-card:nth-child(5) {
+  gap: 15px;
+  padding: 20px 10px;
+  transition: all 0.3s ease;
   margin-top: 0;
-}
-
-/* Staggered layout - bottom row */
-.domain-card:nth-child(2),
-.domain-card:nth-child(4),
-.domain-card:nth-child(6) {
-  margin-top: 40px;
 }
 
 .domain-card:hover {
@@ -125,37 +112,65 @@
 }
 
 .domain-icon {
-  width: 60px;
-  height: 60px;
-  background: #e8e8ff;
-  border-radius: 15px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.domain-card:hover .domain-icon::before {
+  opacity: 1;
 }
 
 .domain-card:hover .domain-icon {
-  background: var(--primary-color);
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
 }
 
 .domain-icon svg {
-  font-size: 28px;
-  color: var(--primary-color);
-  transition: color 0.3s ease;
+  font-size: 36px;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .domain-card:hover .domain-icon svg {
-  color: white;
+  transform: scale(1.1);
 }
 
 .domain-card p {
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--text-dark);
   text-align: center;
   line-height: 1.4;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.domain-card:hover p {
+  color: var(--primary-color);
 }
 
 .about-image {
@@ -212,33 +227,21 @@
 
   .domains-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px 10px;
+    gap: 20px 15px;
   }
 
   .domain-card {
     padding: 10px 5px;
-  }
-
-  /* Adjust staggered layout for mobile */
-  .domain-card:nth-child(1),
-  .domain-card:nth-child(3),
-  .domain-card:nth-child(5) {
     margin-top: 0;
   }
 
-  .domain-card:nth-child(2),
-  .domain-card:nth-child(4),
-  .domain-card:nth-child(6) {
-    margin-top: 25px;
-  }
-
   .domain-icon {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
   }
 
   .domain-icon svg {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .domain-card p {
