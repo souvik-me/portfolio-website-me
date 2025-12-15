@@ -35,6 +35,12 @@
   max-width: 400px;
 }
 
+.footer-cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .footer-cta {
   padding: 10px 24px;
   background: rgba(91, 95, 255, 0.15);
@@ -44,11 +50,20 @@
   font-size: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-cta:hover {
   background: var(--primary-color);
   color: white;
+}
+
+.download-btn .download-icon {
+  font-size: 14px;
 }
 
 .footer-links h3,
@@ -106,9 +121,12 @@
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
@@ -119,7 +137,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     gap: 15px;

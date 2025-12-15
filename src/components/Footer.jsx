@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaLinkedin, FaGithub, FaTwitter, FaHeart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FaLinkedin, FaGithub, FaTwitter, FaHeart, FaDownload } from 'react-icons/fa'
 import './Footer.css'
 
 const Footer = () => {
@@ -10,13 +11,19 @@ const Footer = () => {
           <div className="footer-brand">
             <h2><span>Business Analyst</span></h2>
             <p>
-              Transforming data into actionable insights. Helping businesses 
-              make smarter decisions through comprehensive analysis and 
+              Transforming data into actionable insights. Helping businesses
+              make smarter decisions through comprehensive analysis and
               strategic planning.
             </p>
-            <button className="footer-cta">Open for opportunities</button>
+            <div className="footer-cta-buttons">
+              <button className="footer-cta">Open for opportunities</button>
+              <Link to="/resume" className="footer-cta download-btn">
+                <FaDownload className="download-icon" />
+                View Resume
+              </Link>
+            </div>
           </div>
-          
+
           <div className="footer-links">
             <h3>Quick Links</h3>
             <ul>
@@ -26,7 +33,7 @@ const Footer = () => {
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-          
+
           <div className="footer-contact">
             <h3>Contact</h3>
             <p>souvikmba16@gmail.com</p>
@@ -34,7 +41,7 @@ const Footer = () => {
             <p>Kolkata, India</p>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p>© 2025 Souvik. All rights reserved.</p>
           <p className="footer-credit">
