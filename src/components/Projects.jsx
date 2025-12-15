@@ -109,17 +109,14 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <div className="section-badge">
-          <span className="badge-dot">●</span>
-          Portfolio
-        </div>
+
 
         <h2 className="section-title">
           <span className="gradient-text">Featured Projects</span>
         </h2>
 
         <p className="section-subtitle">
-          Transforming data into actionable insights through innovative solutions
+          My projects reveal key user behaviors, process gaps, and performance trends through structured analysis. They transform complex data and requirements into clear, actionable insights for informed decision-making. Each project clearly shows what needs improvement, why it matters, and the resulting business impact.
         </p>
 
         {/* Featured Project Showcase */}

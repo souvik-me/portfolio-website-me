@@ -47,11 +47,18 @@
 }
 
 .feature-card svg {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--primary-color);
-  padding: 12px;
+  padding: 15px;
   background: #f0f0ff;
-  border-radius: 12px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  /* Prevent shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-card h4 {

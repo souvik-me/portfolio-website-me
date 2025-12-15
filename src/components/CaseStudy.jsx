@@ -17,7 +17,7 @@ const CaseStudy = () => {
             <div className="case-study">
                 <section className="case-study-hero">
                     <div className="case-study-container">
-                        <button className="back-button" onClick={() => navigate('/')}>
+                        <button className="back-button" onClick={() => navigate('/#projects')}>
                             <FaArrowLeft /> Back to Projects
                         </button>
                         <h1 className="hero-title">Case Study Not Found</h1>
@@ -33,7 +33,7 @@ const CaseStudy = () => {
             {/* Hero Section */}
             <section className="case-study-hero">
                 <div className="case-study-container">
-                    <button className="back-button" onClick={() => navigate('/')}>
+                    <button className="back-button" onClick={() => navigate('/#projects')}>
                         <FaArrowLeft /> Back to Projects
                     </button>
 

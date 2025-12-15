@@ -45,7 +45,7 @@ const BlogPost = () => {
                 <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: post.content }}></div>
 
                 <div className="blog-post-footer">
-                    <button onClick={() => navigate('/')} className="secondary-btn">
+                    <button onClick={() => navigate('/#blog')} className="secondary-btn">
                         <FaArrowLeft /> Back to All Articles
                     </button>
                 </div>
