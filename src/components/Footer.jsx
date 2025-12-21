@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>© 2025 Souvik. All rights reserved.</p>
           <p className="footer-credit">
-            Crafted with <FaHeart className="heart-icon" /> for impactful solutions
+            Crafted with AI & <FaHeart className="heart-icon" /> for impactful solutions
           </p>
         </div>
       </div>

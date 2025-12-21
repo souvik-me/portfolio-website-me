@@ -68,7 +68,7 @@ const About = () => {
         <div className="about-image">
           <img src="/src/assets/images/about-image.jpg" alt="Workspace" />
           <div className="about-quote">
-            <p>"The best analysis is one that drives action, not just insight."</p>
+            <p>"Don’t wait for problems to surface- anticipate them, identify the root cause, and resolve them before they escalate."</p>
             <span>— My Philosophy</span>
           </div>
         </div>

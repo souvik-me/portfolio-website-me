@@ -22,6 +22,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .section-badge {
@@ -88,7 +89,7 @@
   border-radius: 32px;
   padding: 48px;
   margin-bottom: 80px;
-  overflow: hidden;
+  overflow: visible;
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -286,10 +287,13 @@
 }
 
 .metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto !important;
   gap: 20px;
   flex-shrink: 0;
+  width: 100%;
+  max-width: 500px;
 }
 
 .metric-card {
@@ -716,7 +720,8 @@
   }
 
   .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
 
   .projects-header {

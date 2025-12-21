@@ -11,6 +11,8 @@ const Contact = () => {
   })
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -32,7 +34,7 @@ const Contact = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const newErrors = {}
 
@@ -57,11 +59,39 @@ const Contact = () => {
     setErrors(newErrors)
 
     if (Object.keys(newErrors).length === 0) {
-      setSubmitted(true)
-      // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      // Hide success message after 3 seconds
-      setTimeout(() => setSubmitted(false), 3000)
+      setLoading(true)
+      setErrorMessage('')
+
+      try {
+        // EmailJS configuration
+        const serviceId = 'service_m5345sj'
+        const templateId = 'template_7umnwnq'
+        const publicKey = 'Ij14NSM6BS1DS_Uyy'
+
+        // Import EmailJS
+        const emailjs = (await import('@emailjs/browser')).default
+
+        // Send email using EmailJS - matching your template parameters
+        const templateParams = {
+          name: formData.name,        // matches {{name}} in template
+          email: formData.email,      // sender's email
+          subject: formData.subject,  // matches {{subject}} in template
+          massage: formData.message   // matches {{massage}} in template
+        }
+
+        await emailjs.send(serviceId, templateId, templateParams, publicKey)
+
+        setSubmitted(true)
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        // Hide success message after 5 seconds
+        setTimeout(() => setSubmitted(false), 5000)
+      } catch (error) {
+        console.error('Error sending email:', error)
+        setErrorMessage('Failed to send message. Please try again or contact me directly at souvikmba16@gmail.com')
+      } finally {
+        setLoading(false)
+      }
     }
   }
 
@@ -71,16 +101,16 @@ const Contact = () => {
         <div className="section-badge">
           <span>💬</span> Get In Touch
         </div>
-        
+
         <h2 className="section-title text-center">
           Let's Create Something<br />
           <span>Amazing Together</span>
         </h2>
-        
+
         <p className="section-subtitle text-center">
           Have a project in mind? I'd love to hear about it. Let's discuss how I can help bring your ideas to life.
         </p>
-        
+
         <div className="contact-content">
           <div className="contact-info">
             <a href="mailto:souvikmba16@gmail.com" className="info-card">
@@ -92,7 +122,7 @@ const Contact = () => {
                 <p>souvikmba16@gmail.com</p>
               </div>
             </a>
-            
+
             <a href="tel:+919749408983" className="info-card">
               <div className="icon-wrapper">
                 <FaPhone />
@@ -102,7 +132,7 @@ const Contact = () => {
                 <p>+91 9749408983</p>
               </div>
             </a>
-            
+
             <div className="info-card">
               <div className="icon-wrapper">
                 <FaMapMarkerAlt />
@@ -112,7 +142,7 @@ const Contact = () => {
                 <p>Kolkata, India</p>
               </div>
             </div>
-            
+
             <div className="social-links">
               <h4>Follow Me</h4>
               <div className="social-icons">
@@ -121,7 +151,7 @@ const Contact = () => {
                 <a href="https://x.com/AtomicreactX" target="_blank" rel="noopener noreferrer" className="social-icon" title="Twitter"><FaTwitter /></a>
               </div>
             </div>
-            
+
             <div className="availability-card">
               <div className="status-dot"></div>
               <div>
@@ -130,45 +160,50 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="contact-form">
             {submitted && (
               <div className="success-message">
-                ✓ Thank you! Your message has been sent successfully.
+                ✓ Thank you! Your message has been sent successfully. I'll get back to you soon!
+              </div>
+            )}
+            {errorMessage && (
+              <div className="error-message-box">
+                ✗ {errorMessage}
               </div>
             )}
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Priya Manna"
+                    placeholder="Your Name"
                     className={errors.name ? 'error' : ''}
                   />
                   {errors.name && <span className="error-message">{errors.name}</span>}
                 </div>
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="priya@example.com"
+                    placeholder="Your Email"
                     className={errors.email ? 'error' : ''}
                   />
                   {errors.email && <span className="error-message">{errors.email}</span>}
                 </div>
               </div>
-              
+
               <div className="form-group">
                 <label>Subject</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -177,22 +212,35 @@ const Contact = () => {
                 />
                 {errors.subject && <span className="error-message">{errors.subject}</span>}
               </div>
-              
+
               <div className="form-group">
                 <label>Your Message</label>
-                <textarea 
+                <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="6" 
+                  rows="6"
                   placeholder="Tell me about your project, timeline, and goals..."
                   className={errors.message ? 'error' : ''}
                 ></textarea>
                 {errors.message && <span className="error-message">{errors.message}</span>}
               </div>
-              
-              <button type="submit" className="primary-btn submit-btn">
-                Send Message <FaEnvelope />
+
+              <button
+                type="submit"
+                className="primary-btn submit-btn"
+                disabled={loading}
+              >
+                {loading ? (
+                  <>
+                    <span className="spinner"></span>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message <FaEnvelope />
+                  </>
+                )}
               </button>
             </form>
           </div>

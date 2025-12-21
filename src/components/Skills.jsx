@@ -36,10 +36,10 @@ const Skills = () => {
       category: 'Data Analysis',
       icon: <FaChartBar />,
       skills: [
-        { name: 'SQL & Database Design', level: 95 },
-        { name: 'Python & R', level: 88 },
+        { name: 'SQL & Mongo DB', level: 95 },
+        { name: 'Python', level: 88 },
         { name: 'Statistical Analysis', level: 90 },
-        { name: 'Excel Advanced', level: 92 }
+        { name: 'Excel', level: 92 }
       ]
     },
     {
@@ -47,8 +47,8 @@ const Skills = () => {
       icon: <FaChartLine />,
       skills: [
         { name: 'Power BI', level: 93 },
-        { name: 'Tableau', level: 87 },
-        { name: 'Data Studio', level: 85 },
+        { name: 'Excel', level: 92 },
+        { name: 'BPMN', level: 85 },
         { name: 'Dashboard Design', level: 90 }
       ]
     },
@@ -67,9 +67,9 @@ const Skills = () => {
       icon: <FaCode />,
       skills: [
         { name: 'APIs & Integration', level: 82 },
-        { name: 'ETL Processes', level: 86 },
+        { name: 'Manual & Automation Testing', level: 86 },
         { name: 'Cloud Platforms', level: 80 },
-        { name: 'Version Control', level: 85 }
+        { name: 'Git', level: 85 }
       ]
     },
     {
