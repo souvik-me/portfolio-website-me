@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCheckCircle, FaBolt, FaUsers, FaAward, FaUniversity, FaHospital, FaShoppingCart, FaLaptopCode, FaIndustry, FaBriefcase } from 'react-icons/fa'
+import { FaCheckCircle, FaBolt, FaUsers, FaAward, FaHospital, FaShoppingCart, FaLaptopCode, FaIndustry, FaBriefcase } from 'react-icons/fa'
 import './About.css'
 
 const About = () => {
@@ -68,7 +68,7 @@ const About = () => {
         <div className="about-image">
           <img src="/src/assets/images/about-image.jpg" alt="Workspace" />
           <div className="about-quote">
-            <p>"The best analysis is one that drives action, not just insight."</p>
+            <p>"Don’t wait for problems to surface- anticipate them, identify the root cause, and resolve them before they escalate."</p>
             <span>— My Philosophy</span>
           </div>
         </div>
@@ -77,12 +77,6 @@ const About = () => {
       <div className="domains-section">
         <h3>DOMAINS I'VE WORKED ON</h3>
         <div className="domains-grid">
-          <div className="domain-card">
-            <div className="domain-icon">
-              <FaUniversity />
-            </div>
-            <p>Finance and Banking</p>
-          </div>
           <div className="domain-card">
             <div className="domain-icon">
               <FaHospital />

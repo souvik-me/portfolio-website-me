@@ -37,7 +37,7 @@ const Projects = () => {
       title: 'FIRS Tax Direct Portal',
       category: 'FinTech',
       status: 'Live in Production',
-      duration: '6 months',
+      duration: '9 Months',
       description: 'National VAT data management platform automating VAT reporting from Payment Service Providers with real-time validation and analytics.',
       impact: '95%',
       impactLabel: 'Data Accuracy',
@@ -45,58 +45,58 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Supply Chain Optimization',
+      title: 'Heartland Workforce Platform',
       category: 'Optimization',
-      status: 'Completed',
-      duration: '4 months',
-      description: 'End-to-end analysis and redesign of supply chain processes, reducing operational costs significantly.',
-      impact: '-30%',
-      impactLabel: 'Cost Reduction',
-      tags: ['Process Mining', 'Tableau', 'Optimization']
+      status: 'Live in Production',
+      duration: '8 Months',
+      description: 'AI-powered emergency restoration workforce management platform with automated dispatch, real-time tracking, and intelligent SOP generation.',
+      impact: '60%',
+      impactLabel: 'Faster Project Closure',
+      tags: ['Workforce Management', 'AI/ML', 'Real-time Tracking', 'Automation']
     },
     {
       id: 4,
-      title: 'Customer Segmentation Model',
-      category: 'AI/ML',
-      status: 'Completed',
-      duration: '2 months',
-      description: 'Machine learning model for customer segmentation enabling targeted marketing campaigns.',
-      impact: '+45%',
-      impactLabel: 'Campaign ROI',
-      tags: ['Python', 'Machine Learning', 'Clustering', 'Analytics']
+      title: 'eParisheva – Hyperlocal Marketplace',
+      category: 'Marketplace',
+      status: 'Live',
+      duration: '2 Years',
+      description: 'Hyperlocal marketplace for local products & services enabling small business owners to create digital storefronts.',
+      impact: '70%',
+      impactLabel: 'Merchants Onboarded',
+      tags: ['Marketplace', 'Hyperlocal', 'Mobile-first', 'Digitization']
     },
     {
       id: 5,
-      title: 'Financial Forecasting System',
-      category: 'Analytics',
-      status: 'Completed',
-      duration: '5 months',
-      description: 'Predictive analytics system for financial forecasting and budget planning with high accuracy.',
-      impact: '95%',
-      impactLabel: 'Forecast Accuracy',
-      tags: ['Python', 'Time Series', 'Forecasting', 'SQL']
+      title: 'Polimeraas – Fresh Produce System',
+      category: 'Inventory & Distribution',
+      status: 'Live',
+      duration: '3 Months',
+      description: 'Inventory management and multistore tracking system for fresh produce distribution, reducing wastage and improving stock accuracy.',
+      impact: '35%',
+      impactLabel: 'Reduction in Wastage',
+      tags: ['Inventory Management', 'Supply Chain', 'Real-time Tracking', 'Distribution']
     },
     {
       id: 6,
-      title: 'Inventory Management Dashboard',
-      category: 'Optimization',
-      status: 'Completed',
-      duration: '3 months',
-      description: 'Real-time inventory tracking and optimization dashboard reducing stockouts and overstock.',
-      impact: '-25%',
-      impactLabel: 'Inventory Costs',
-      tags: ['Power BI', 'SQL', 'Optimization']
+      title: 'FastForge.ai – AI Store Builder',
+      category: 'SaaS / AI',
+      status: 'Live',
+      duration: '6 Months',
+      description: 'AI-powered e-commerce platform builder that helps entrepreneurs launch fully functional online stores in minutes using simple text prompts.',
+      impact: '10x',
+      impactLabel: 'Faster Launch',
+      tags: ['AI/ML', 'SaaS', 'E-Commerce', 'Automation']
     },
     {
       id: 7,
-      title: 'Sales Performance Tracker',
-      category: 'Analytics',
-      status: 'Completed',
-      duration: '2 months',
-      description: 'Interactive dashboard for tracking sales team performance, targets, and conversion metrics.',
-      impact: '+28%',
-      impactLabel: 'Sales Growth',
-      tags: ['Tableau', 'SQL', 'Analytics']
+      title: 'jalshri.com – Dropshipping Marketplace',
+      category: 'E-Commerce',
+      status: 'Live',
+      duration: '4 Months',
+      description: 'Dropshipping-based organic products marketplace connecting verified suppliers with customers through an automated fulfillment engine.',
+      impact: '100%',
+      impactLabel: 'Dropshipping Fulfillment',
+      tags: ['E-Commerce', 'Dropshipping', 'Organic', 'Automation']
     }
   ]
 
@@ -109,17 +109,14 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <div className="section-badge">
-          <span className="badge-dot">●</span>
-          Portfolio
-        </div>
+
 
         <h2 className="section-title">
-          Featured <span className="gradient-text">Projects</span>
+          <span className="gradient-text">Featured Projects</span>
         </h2>
 
         <p className="section-subtitle">
-          Transforming data into actionable insights through innovative solutions
+          My projects reveal key user behaviors, process gaps, and performance trends through structured analysis. They transform complex data and requirements into clear, actionable insights for informed decision-making. Each project clearly shows what needs improvement, why it matters, and the resulting business impact.
         </p>
 
         {/* Featured Project Showcase */}
@@ -166,7 +163,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <button className="featured-cta" onClick={() => navigate('/case-study')}>
+              <button className="featured-cta" onClick={() => navigate('/case-study/lirs')}>
                 View Case Study <FaArrowRight />
               </button>
             </div>
@@ -226,7 +223,17 @@ const Projects = () => {
 
                 <div className="project-footer">
                   <span className="project-duration">{project.duration}</span>
-                  <button className="project-link">
+                  <button
+                    className="project-link"
+                    onClick={() => {
+                      if (project.id === 2) navigate('/case-study/firs')
+                      if (project.id === 3) navigate('/case-study/heartland')
+                      if (project.id === 4) navigate('/case-study/eparisheva')
+                      if (project.id === 5) navigate('/case-study/polimeraas')
+                      if (project.id === 6) navigate('/case-study/fastforge')
+                      if (project.id === 7) navigate('/case-study/jalshri')
+                    }}
+                  >
                     Details <FaArrowRight />
                   </button>
                 </div>
