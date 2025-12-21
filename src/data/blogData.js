@@ -7,7 +7,7 @@ export const blogData = [
         excerpt: 'How artificial intelligence is transforming the way we analyze data and make strategic decisions in modern businesses.',
         date: 'Nov 12, 2025',
         readTime: '6 min read',
-        image: '/src/assets/images/blog-hero.jpg',
+        image: '/images/blog-hero.jpg',
         content: `
             <p>Business Analytics has always been about turning data into decisions. But today, a new force is redefining how businesses interpret, predict, and act upon information: Artificial Intelligence.</p>
             <p>AI isn’t just improving business analytics—it’s fundamentally transforming it into a faster, smarter, and more predictive discipline.</p>
@@ -65,7 +65,7 @@ export const blogData = [
         excerpt: 'Notion isn’t just another productivity tool—it’s become a central operating system for analysis-driven teams.',
         date: 'Nov 27, 2025',
         readTime: '8 min read',
-        image: '/src/assets/images/project2.jpg',
+        image: '/images/project2.jpg',
         content: `
             <p>In a world where businesses move fast and teams are increasingly distributed, business analysts are expected to work smarter, communicate clearly, and deliver insights quickly. Traditional documentation tools like Word, Excel, or static PDFs no longer match the pace of modern product development.</p>
             
@@ -141,7 +141,7 @@ export const blogData = [
         excerpt: 'Create compelling, user-friendly dashboards that drive action. Learn the principles of effective data visualization.',
         date: 'Nov 5, 2025',
         readTime: '5 min read',
-        image: '/src/assets/images/project3.jpg',
+        image: '/images/project3.jpg',
         content: `
             <p>Dashboards have become one of the most important tools for modern businesses. Whether it's tracking sales performance, monitoring operational KPIs, or analyzing customer behavior, dashboards help teams move from guesswork to data-driven decisions.</p>
             <p>But a dashboard is only as good as its design. A cluttered or confusing dashboard can hide insights, slow teams down, or worse—lead to wrong decisions.</p>
