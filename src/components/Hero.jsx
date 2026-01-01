@@ -29,7 +29,10 @@ const Hero = () => {
           </h1>
 
           <p className="hero-description">
-            Driven by curiosity and a love for problem-solving, I bridge business needs with intelligent, data-backed solutions. I thrive on simplifying tough workflows, enhancing user experiences, and crafting strategies that deliver measurable impact.
+            Driven by curiosity and a love for problem-solving, I bridge business needs with intelligent, data-backed solutions.
+          </p>
+          <p className="hero-description">
+            I thrive on simplifying tough workflows, enhancing user experiences, and crafting strategies that deliver measurable impact.
           </p>
 
           <div className="hero-buttons">
@@ -70,13 +73,13 @@ const Hero = () => {
             <img src="/images/hero-image.jpg" alt="Professional Business Analyst" />
           </div>
 
-          <div className="hero-card success-card">
+          {/* <div className="hero-card success-card">
             <div className="success-icon">📈</div>
             <div>
               <h3>95%</h3>
               <p>Success Rate</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

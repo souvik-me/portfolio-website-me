@@ -22,7 +22,7 @@ const About = () => {
           </p>
 
           <p className="about-text">
-            With over 5 years of experience in business analysis, I've helped
+            With over 6 years of experience in business analysis, I've helped
             organizations across various industries transform their operations through
             data-driven insights and strategic planning.
           </p>
@@ -58,8 +58,8 @@ const About = () => {
             <div className="feature-card">
               <FaAward />
               <div>
-                <h4>Certified Professional</h4>
-                <p>PMI-PBA & CBAP certified</p>
+                <h4>Third-Party Integration Expert</h4>
+                <p>PG, POS, CRM, & external platforms</p>
               </div>
             </div>
           </div>

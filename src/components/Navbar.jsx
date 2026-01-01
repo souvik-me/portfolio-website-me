@@ -11,7 +11,7 @@ const Navbar = () => {
 
       // Determine active section based on scroll position
       const sections = ['home', 'about', 'skills', 'projects', 'blog', 'contact']
-      
+
       for (let section of sections) {
         const element = document.getElementById(section)
         if (element) {
@@ -23,7 +23,7 @@ const Navbar = () => {
         }
       }
     }
-    
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -32,10 +32,10 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <h2><span>Business analyst</span></h2>
+          <h2><span>Business Analyst</span></h2>
           <h2><p>I'm Souvik</p></h2>
         </div>
-        
+
         <ul className="nav-menu">
           <li><a href="#home" className={activeSection === 'home' ? 'active' : ''}>Home</a></li>
           <li><a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a></li>
