@@ -84,6 +84,11 @@
   max-width: 500px;
 }
 
+.hero-description:first-of-type {
+  margin-bottom: 8px;
+}
+
+
 .hero-buttons {
   display: flex;
   gap: 20px;
