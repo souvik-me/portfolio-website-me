@@ -287,9 +287,9 @@
 }
 
 .metrics-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  grid-template-rows: auto auto !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 20px;
   flex-shrink: 0;
   width: 100%;
