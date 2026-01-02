@@ -220,6 +220,23 @@
   margin-top: 6px;
 }
 
+.textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.word-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.word-count.excess {
+  color: #ff3b3b;
+}
+
 .success-message {
   background: #e8f5e9;
   color: var(--success);
@@ -308,5 +325,83 @@
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Success Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-icon {
+  width: 70px;
+  height: 70px;
+  background: #e8f5e9;
+  color: var(--success);
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.popup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

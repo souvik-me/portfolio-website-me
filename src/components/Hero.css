@@ -120,13 +120,8 @@
   font-weight: 500;
   color: #64748b;
   letter-spacing: 0.3px;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: center;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
 
 .hero-highlights::-webkit-scrollbar {

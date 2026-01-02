@@ -60,18 +60,19 @@ const Hero = () => {
           </div>
 
           <div className="hero-highlights">
-            Global teams across 3+ regions • Tax & compliance • POS • Ecomm • SaaS • 6+ years delivering production-grade platforms
+            Global teams across 3+ regions • Tax & compliance • POS<br />
+            Ecomm • SaaS • 6+ years delivering production-grade platforms
           </div>
         </div>
 
         <div className="hero-image-section">
-          <div className="hero-card ai-card">
+          {/* <div className="hero-card ai-card">
             <FaBrain />
             <div>
               <h4>AI-Powered</h4>
               <p>Analytics</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="hero-image">
             <img src="/images/hero-image.jpg" alt="Professional Business Analyst" />

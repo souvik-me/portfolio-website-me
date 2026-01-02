@@ -13,10 +13,15 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const [showPopup, setShowPopup] = useState(false)
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
+  }
+
+  const getWordCount = (str) => {
+    return str.trim() ? str.trim().split(/\s+/).length : 0
   }
 
   const handleChange = (e) => {
@@ -54,6 +59,8 @@ const Contact = () => {
 
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
+    } else if (getWordCount(formData.message) > 500) {
+      newErrors.message = 'Message cannot exceed 500 words'
     }
 
     setErrors(newErrors)
@@ -81,11 +88,9 @@ const Contact = () => {
 
         await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-        setSubmitted(true)
+        setShowPopup(true)
         // Reset form
         setFormData({ name: '', email: '', subject: '', message: '' })
-        // Hide success message after 5 seconds
-        setTimeout(() => setSubmitted(false), 5000)
       } catch (error) {
         console.error('Error sending email:', error)
         setErrorMessage('Failed to send message. Please try again or contact me directly at souvikmba16@gmail.com')
@@ -207,7 +212,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Project Inquiry"
+                  placeholder="Inquiry"
                   className={errors.subject ? 'error' : ''}
                 />
                 {errors.subject && <span className="error-message">{errors.subject}</span>}
@@ -220,10 +225,15 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="6"
-                  placeholder="Tell me about your project, timeline, and goals..."
+                  placeholder="Tell me about your Idea!"
                   className={errors.message ? 'error' : ''}
                 ></textarea>
-                {errors.message && <span className="error-message">{errors.message}</span>}
+                <div className="textarea-footer">
+                  <span className={`word-count ${getWordCount(formData.message) > 500 ? 'excess' : ''}`}>
+                    {getWordCount(formData.message)} / 500 words
+                  </span>
+                  {errors.message && <span className="error-message">{errors.message}</span>}
+                </div>
               </div>
 
               <button
@@ -246,6 +256,18 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {showPopup && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div className="modal-icon">✓</div>
+            <h3>Thank you for your message. I’ll get back to you within the next 48 hours.</h3>
+            <button className="primary-btn popup-btn" onClick={() => setShowPopup(false)}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
