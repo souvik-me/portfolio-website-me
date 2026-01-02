@@ -129,7 +129,7 @@
     margin-bottom: 48px;
 }
 
-.metrics-grid {
+.case-study .metrics-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -138,7 +138,7 @@
     margin: 0 auto;
 }
 
-.metric-card {
+.case-study .metric-card {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
     padding: 32px 15px;
     border-radius: 24px;
@@ -152,29 +152,30 @@
     justify-content: center;
 }
 
-.metric-card:hover {
+.case-study .metric-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15);
     border-color: rgba(99, 102, 241, 0.3);
 }
 
-.metric-icon {
+.case-study .metric-icon {
     font-size: 40px;
     color: #6366f1;
     margin-bottom: 16px;
 }
 
-.metric-value {
-    font-size: 48px;
+.case-study .metric-value {
+    font-size: 56px;
     font-weight: 800;
+    margin-bottom: 8px;
     background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 8px;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
 }
 
-.metric-label {
+.case-study .metric-label {
     font-size: 14px;
     font-weight: 600;
     color: #64748b;
@@ -499,19 +500,19 @@
 
 /* ===== Responsive Design ===== */
 @media (max-width: 1024px) {
-    .metrics-grid {
+    .case-study .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .challenges-grid {
+    .case-study .challenges-grid {
         grid-template-columns: 1fr;
     }
 
-    .solutions-grid {
+    .case-study .solutions-grid {
         grid-template-columns: 1fr;
     }
 
-    .comparison-table {
+    .case-study .comparison-table {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         border-radius: 12px;
@@ -520,22 +521,22 @@
         scrollbar-color: #6366f1 rgba(99, 102, 241, 0.1);
     }
 
-    .comparison-table::-webkit-scrollbar {
+    .case-study .comparison-table::-webkit-scrollbar {
         height: 6px;
     }
 
-    .comparison-table::-webkit-scrollbar-track {
+    .case-study .comparison-table::-webkit-scrollbar-track {
         background: rgba(99, 102, 241, 0.05);
         border-radius: 10px;
     }
 
-    .comparison-table::-webkit-scrollbar-thumb {
+    .case-study .comparison-table::-webkit-scrollbar-thumb {
         background: #6366f1;
         border-radius: 10px;
     }
 
-    .table-header,
-    .table-row {
+    .case-study .table-header,
+    .case-study .table-row {
         min-width: 800px;
     }
 }
