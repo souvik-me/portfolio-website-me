@@ -173,17 +173,6 @@ const Projects = () => {
         {/* Project Filters */}
         <div className="projects-header">
           <h3 className="projects-section-title">More Projects</h3>
-          <div className="project-filters">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Projects Grid */}
