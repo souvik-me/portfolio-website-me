@@ -132,16 +132,24 @@
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .metric-card {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
-    padding: 32px;
-    border-radius: 20px;
+    padding: 32px 15px;
+    border-radius: 24px;
     text-align: center;
     border: 2px solid rgba(99, 102, 241, 0.1);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 220px;
+    justify-content: center;
 }
 
 .metric-card:hover {
@@ -261,8 +269,8 @@
 /* ===== Challenges Grid ===== */
 .challenges-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
     margin: 32px 0;
 }
 
@@ -495,30 +503,48 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+
     .solutions-grid {
         grid-template-columns: 1fr;
     }
 
+    .comparison-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        scrollbar-width: thin;
+        scrollbar-color: #6366f1 rgba(99, 102, 241, 0.1);
+    }
+
+    .comparison-table::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .comparison-table::-webkit-scrollbar-track {
+        background: rgba(99, 102, 241, 0.05);
+        border-radius: 10px;
+    }
+
+    .comparison-table::-webkit-scrollbar-thumb {
+        background: #6366f1;
+        border-radius: 10px;
+    }
+
     .table-header,
     .table-row {
-        grid-template-columns: 1fr;
-    }
-
-    .table-cell {
-        border-right: none;
-        border-bottom: 1px solid rgba(99, 102, 241, 0.1);
-    }
-
-    .table-header .table-cell {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .table-cell:last-child {
-        border-bottom: none;
+        min-width: 800px;
     }
 }
 
 @media (max-width: 768px) {
+    .case-study-hero {
+        padding: 100px 20px 60px;
+    }
+
     .hero-title {
         font-size: 32px;
     }
@@ -540,7 +566,7 @@
     }
 
     .metric-value {
-        font-size: 40px;
+        font-size: 44px;
     }
 
     .content-body p {
@@ -549,5 +575,10 @@
 
     .cta-section h2 {
         font-size: 32px;
+    }
+
+    .metric-card {
+        padding: 40px 24px;
+        min-height: auto;
     }
 }
