@@ -108,6 +108,26 @@
   color: var(--text-light);
 }
 
+.hero-highlights {
+  margin-top: 50px;
+  padding-top: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.hero-highlights::-webkit-scrollbar {
+  display: none;
+}
+
 .hero-image-section {
   position: relative;
   animation: slideInRight 0.8s ease-out;

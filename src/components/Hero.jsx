@@ -58,6 +58,10 @@ const Hero = () => {
               <p>Happy Clients</p>
             </div>
           </div>
+
+          <div className="hero-highlights">
+            Global teams across 3+ regions • Tax & compliance • POS • Ecomm • SaaS • 6+ years delivering production-grade platforms
+          </div>
         </div>
 
         <div className="hero-image-section">

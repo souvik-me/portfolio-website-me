@@ -229,34 +229,71 @@
 
   .domains-section {
     margin: 60px 0 0 0;
-    padding: 40px 20px;
+    padding: 40px 15px;
+  }
+
+  .domains-section h3 {
+    font-size: 11px;
+    margin-bottom: 30px;
   }
 
   .domains-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 20px;
+    padding: 0 10px;
   }
 
   .domain-card {
-    padding: 10px 5px;
+    padding: 15px 10px;
     margin-top: 0;
   }
 
   .domain-icon {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
   }
 
   .domain-icon svg {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .domain-card p {
-    font-size: 11px;
+    font-size: 12px;
+    word-wrap: break-word;
+    max-width: 100%;
   }
 
   .about-quote {
     position: static;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .domains-section {
+    padding: 30px 10px;
+  }
+
+  .domains-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 15px;
+  }
+
+  .domain-card {
+    padding: 12px 8px;
+  }
+
+  .domain-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .domain-icon svg {
+    font-size: 26px;
+  }
+
+  .domain-card p {
+    font-size: 11px;
+    line-height: 1.3;
   }
 }
