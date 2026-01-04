@@ -36,7 +36,7 @@ const Resume = () => {
                     </div>
                     <div className="social-links">
                         <div className="contact-item">
-                            <FaGlobe /> <a href="https://www.heysouvikonline.com" target="_blank" rel="noopener noreferrer">www.heysouvikonline.com</a>
+                            <FaGlobe /> <a href="https://www.heysouvik.online" target="_blank" rel="noopener noreferrer">www.heysouvik.online</a>
                         </div>
                         <div className="contact-item">
                             <FaGithub /> <a href="https://github.com/souvik-me" target="_blank" rel="noopener noreferrer">github.com/souvik-me</a>
