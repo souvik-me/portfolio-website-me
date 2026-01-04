@@ -87,7 +87,6 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 15px;
-    width: 100%;
 }
 
 .contact-item {
@@ -544,7 +543,9 @@
     .contact-info,
     .social-links {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        width: fit-content;
+        margin: 15px auto 0;
         gap: 12px;
     }
 
